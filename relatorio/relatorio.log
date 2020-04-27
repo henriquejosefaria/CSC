@@ -1,17 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.7)  24 APR 2020 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  27 APR 2020 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**relatorio
+**relatorio.tex
 (./relatorio.tex
-LaTeX2e <2018-12-01>
-(./llncs.cls
-Document Class: llncs 2018/03/10 v2.20 
- LaTeX document class for Lecture Notes in Computer Science
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 22 language(s) loaded.
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -25,271 +23,287 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
-\c@tracingmulticols=\count88
-\mult@box=\box27
-\multicol@leftmargin=\dimen103
-\c@unbalance=\count89
-\c@collectmore=\count90
-\doublecol@number=\count91
-\multicoltolerance=\count92
-\multicolpretolerance=\count93
-\full@width=\dimen104
-\page@free=\dimen105
-\premulticols=\dimen106
-\postmulticols=\dimen107
-\multicolsep=\skip43
-\multicolbaselineskip=\skip44
-\partial@page=\box28
-\last@line=\box29
-\maxbalancingoverflow=\dimen108
-\mult@rightbox=\box30
-\mult@grightbox=\box31
-\mult@gfirstbox=\box32
-\mult@firstbox=\box33
-\@tempa=\box34
-\@tempa=\box35
-\@tempa=\box36
-\@tempa=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\c@columnbadness=\count94
-\c@finalcolumnbadness=\count95
-\last@try=\dimen109
-\multicolovershoot=\dimen110
-\multicolundershoot=\dimen111
-\mult@nat@firstbox=\box51
-\colbreak@box=\box52
-\mc@col@check@num=\count96
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/aliascnt.sty
-Package: aliascnt 2018/09/07 v1.5 Alias counters (HO)
-)
-\c@chapter=\count97
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 365.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 366.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 367.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 368.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 369.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 370.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 371.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
-\tocchpnum=\dimen112
-\tocsecnum=\dimen113
-\tocsectotal=\dimen114
-\tocsubsecnum=\dimen115
-\tocsubsectotal=\dimen116
-\tocsubsubsecnum=\dimen117
-\tocsubsubsectotal=\dimen118
-\tocparanum=\dimen119
-\tocparatotal=\dimen120
-\tocsubparanum=\dimen121
-\@tempcntc=\count98
-\fnindent=\dimen122
-\c@@inst=\count99
-\c@@auth=\count100
-\c@auco=\count101
-\instindent=\dimen123
-\authrun=\box53
-\authorrunning=\toks14
-\tocauthor=\toks15
-\titrun=\box54
-\titlerunning=\toks16
-\toctitle=\toks17
-\c@theorem=\count102
-\c@case=\count103
-\c@conjecture=\count104
-\c@corollary=\count105
-\c@definition=\count106
-\c@example=\count107
-\c@exercise=\count108
-\c@lemma=\count109
-\c@note=\count110
-\c@problem=\count111
-\c@property=\count112
-\c@proposition=\count113
-\c@question=\count114
-\c@solution=\count115
-\c@remark=\count116
-\headlineindent=\dimen124
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
-)
-\lst@mode=\count117
-\lst@gtempboxa=\box55
-\lst@token=\toks19
-\lst@length=\count118
-\lst@currlwidth=\dimen125
-\lst@column=\count119
-\lst@pos=\count120
-\lst@lostspace=\dimen126
-\lst@width=\dimen127
-\lst@newlines=\count121
-\lst@lineno=\count122
-\lst@maxwidth=\dimen128
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count123
-\lst@skipnumbers=\count124
-\lst@framebox=\box56
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2019/02/27 1.8b listings configuration
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/babel-portuges/portuges.ld
+f
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+ (/usr/local/texlive/2018basic/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count89
+)
+Package babel Info: Making " an active character on input line 145.
 ))
-Package: listings 2019/02/27 1.8b (Carsten Heinz)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks17
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks26
+)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen129
-\Gin@req@width=\dimen130
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/05/04 3.31 The Babel package
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/05/04 3.31 Babel switching mechanism
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel-portuges/portuges.ldf
-Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/05/04 3.31 Babel common definitions
-\babel@savecnt=\count125
-\U@D=\dimen131
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count126
-)
-Package babel Info: Making " an active character on input line 145.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks20
-\verbatim@line=\toks21
-\verbatim@in@stream=\read1
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count127
-\float@exts=\toks22
-\float@box=\box57
-\@float@everytoks=\toks23
-\@floatcapt=\box58
+\c@float@type=\count102
+\float@exts=\toks28
+\float@box=\box28
+\@float@everytoks=\toks29
+\@floatcapt=\box29
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks24
-\inpenc@posthook=\toks25
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen115
+\captionmargin@=\dimen116
+\captionwidth=\dimen117
+\caption@tempdima=\dimen118
+\caption@indent=\dimen119
+\caption@parindent=\dimen120
+\caption@hangindent=\dimen121
+)
+\c@ContinuedFloat=\count103
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count104
+\c@subtable=\count105
+)
+\c@defin=\count106
+\c@obs=\count107
+\c@teo=\count108
+\c@nota=\count109
+\c@lema=\count110
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count111
+\lst@gtempboxa=\box30
+\lst@token=\toks30
+\lst@length=\count112
+\lst@currlwidth=\dimen122
+\lst@column=\count113
+\lst@pos=\count114
+\lst@lostspace=\dimen123
+\lst@width=\dimen124
+\lst@newlines=\count115
+\lst@lineno=\count116
+\lst@maxwidth=\dimen125
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count117
+\lst@skipnumbers=\count118
+\lst@framebox=\box31
+)
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (./relatorio.aux)
 \openout1 = `relatorio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-\c@lstlisting=\count128
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
 
-(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2018basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
-\scratchdimen=\dimen132
-\scratchbox=\box59
-\nofMPsegments=\count130
-\nofMParguments=\count131
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count132
-\MPscratchDim=\dimen133
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
-\everyMPtoPDFconversion=\toks27
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+\scratchcounter=\count119
+\scratchdimen=\dimen126
+\scratchbox=\box32
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen127
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-))))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+(/usr/local/texlive/2018basic/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -303,52 +317,97 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./title.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 18.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count125
+<uminho.png, id=1, 1778.645pt x 593.21625pt>
+File: uminho.png Graphic file (type png)
+<use uminho.png>
+Package pdftex.def Info: uminho.png  used on input line 61.
+(pdftex.def)             Requested size: 142.26378pt x 47.44016pt.
  [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./obj
-etivos.tex)
-(./conclusao.tex) [2] (./relatorio.aux) ) 
+{/usr/local/texlive/2018basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./
+uminho.png>] (./relatorio.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `relatorio.toc'.
+
+ [1]
+[1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
+
+ (/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
+ [2]
+[3]
+Overfull \hbox (8.83679pt too wide) in paragraph at lines 195--196
+[]\OT1/cmr/m/n/12 Come^^Xcou-se por fa-zer o tra-ta-mento do \OT1/cmr/m/it/12 d
+a-ta-set We-ather[]Descriptions[]Braga\OT1/cmr/m/n/12 ,
+ []
+
+<weather.png, id=28, 534.99875pt x 262.9825pt>
+File: weather.png Graphic file (type png)
+<use weather.png>
+Package pdftex.def Info: weather.png  used on input line 203.
+(pdftex.def)             Requested size: 284.52756pt x 139.8656pt.
+[4]
+Overfull \hbox (37.33687pt too wide) in paragraph at lines 207--208
+[]\OT1/cmr/m/n/12 De se-guida, procedeu-se ^^Ra pre-para^^Xc~ao do \OT1/cmr/m/i
+t/12 da-ta-set Traf-fic[]Flow[]Braga\OT1/cmr/m/n/12 , procedendo-
+ []
+
+<join.png, id=32, 651.43375pt x 408.52625pt>
+File: join.png Graphic file (type png)
+<use join.png>
+Package pdftex.def Info: join.png  used on input line 211.
+(pdftex.def)             Requested size: 284.52756pt x 178.43681pt.
+
+Overfull \hbox (29.53166pt too wide) in paragraph at lines 215--216
+[]\OT1/cmr/m/n/12 Ap^^Sos a jun^^Xc~ao dos \OT1/cmr/m/it/12 da-ta-sets\OT1/cmr/
+m/n/12 , eliminou-se a co-luna \OT1/cmr/m/it/12 cre-a-tion[]date \OT1/cmr/m/n/1
+2 e transformaram-
+ []
+
+[5 <./weather.png> <./join.png>] [6] (./relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 4141 strings out of 492616
- 56639 string characters out of 6129481
- 141130 words of memory out of 5000000
- 8006 multiletter control sequences out of 15000+600000
- 10058 words of font info for 23 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 41i,5n,32p,1163b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fo
-nts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
-pe1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/cm-super/sfbx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
-blic/cm-super/sfrm0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
-ic/cm-super/sfrm1000.pfb>
-Output written on relatorio.pdf (2 pages, 113727 bytes).
+ 6073 strings out of 494091
+ 87080 string characters out of 6163523
+ 163049 words of memory out of 5000000
+ 9648 multiletter control sequences out of 15000+600000
+ 11534 words of font info for 42 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 42i,6n,40p,810b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/201
+8basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive
+/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/t
+exlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/loc
+al/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
+.pfb>
+Output written on relatorio.pdf (8 pages, 389156 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,8 @@
+\babel@toc {portuges}{}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {section}{\numberline {2}\textit {Dataset}}{2}
+\contentsline {subsection}{\numberline {2.1}\textit {Traffic Flow Braga}}{2}
+\contentsline {subsection}{\numberline {2.2}\textit {Traffic Incidents Braga}}{3}
+\contentsline {subsection}{\numberline {2.3}\textit {Weather Braga Descriptions}}{3}
+\contentsline {subsection}{\numberline {2.4}\textit {Weather Braga}}{4}
+\contentsline {subsection}{\numberline {2.5}Prepara\IeC {\c c}\IeC {\~a}o dos dados}{4}
