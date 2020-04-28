@@ -212,7 +212,7 @@ De seguida, procedeu-se à preparação do \textit{dataset Traffic\_Flow\_Braga}
 	\caption{Preparação do \textit{dataset Traffic\_Flow\_Braga}.}
 \end{figure}
 
-Após a junção dos \textit{datasets}, eliminou-se a coluna \textit{creation\_date} e transformaram-se os valores "N/A", das colunas \textit{rain}, \textit{thunderstorm} e \textit{atmosphere}, em \textit{missing values}, recorreundo ao nodo \textit{String Manipulation}. De seguida, fez-se um \textit{merge} das colunas \textit{rain} e \textit{thunderstorm}, tendo-se alterado alguns dos valores ("trovoada com chuva fraca" -> "chuva fraca", "trovoada com chuva forte" -> "chuva forte" e "trovoada" -> "chuva"), tendo-se removido, no final, a coluna \textit{thunderstorm}. Por fim, com os valores da coluna \textit{clouds} construíram-se 6 intervalos:
+Após a junção dos \textit{datasets}, eliminou-se a coluna \textit{creation\_date} e transformaram-se os valores "N/A", das colunas \textit{rain}, \textit{thunderstorm} e \textit{atmosphere}, em \textit{missing values}, recorrendo ao nodo \textit{String Manipulation}. De seguida, fez-se um \textit{merge} das colunas \textit{rain} e \textit{thunderstorm}, tendo-se alterado alguns dos valores ($"trovoada \ com \ chuva \ fraca" \rightarrow "chuva \ fraca"$, $"trovoada \ com \ chuva \ forte" \rightarrow "chuva \ forte"$ e $"trovoada" \rightarrow "chuva"$), tendo-se removido, no final, a coluna \textit{thunderstorm}. Por fim, com os valores da coluna \textit{clouds} construíram-se 6 intervalos:
 
 \begin{enumerate}
 	\item céu claro: $]-\inf,17[$;
@@ -225,7 +225,7 @@ Após a junção dos \textit{datasets}, eliminou-se a coluna \textit{creation\_d
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{prep}
+	\includegraphics[width=15cm]{prep}
 	\caption{Preparação dos dados.}
 \end{figure}
 
@@ -239,11 +239,11 @@ Por fim, tratou-se o \textit{dataset Traffic\_Incidents\_Braga}, procedendo-se �
 
 Após se ter apenas um \textit{dataset}, e tendo em conta que as colunas \textit{atmosphere} e \textit{rain} apresentam muitos \textit{missing values}, procedeu-se ao tratamento dos mesmos.
 
-Começou-se, então, por tratar os \textit{missing values} da coluna \textit{atmosphere}, tendo-se separado o \textit{dataset} em dois, recorrendo ao nodo \textit{Rule-based Row Splitter}. Um \textit{dataset} apresenta a coluna \textit{atmosphere} apenas com \textit{missing values} e o outro apresenta a coluna \textit{atmosphere} com os vários valores. De seguida, utilizaram-se \textit{Random Forest} para fazer a previsão dos \textit{missing values}, para isso, particionou-se o \textit{dataset} que apresentava os valores do atributo \textit{atmosphere} tendo-se usado $80\%$ dos dados para treino. Após feita a previsão dos \textit{missing values}, procedeu-se à previsão dos \textit{missing values} do atributo \textit{rain}, tendo-se utilizado o mesmo raciocínio.
+Começou-se, então, por tratar os \textit{missing values} da coluna \textit{atmosphere}, tendo-se separado o \textit{dataset} em dois, recorrendo ao nodo \textit{Rule-based Row Splitter}. Um \textit{dataset} apresenta a coluna \textit{atmosphere} apenas com \textit{missing values} e o outro apresenta a coluna \textit{atmosphere} com os vários valores. De seguida, utilizaram-se \textit{Random Forest} para fazer a previsão dos \textit{missing values}, para isso, particionou-se o \textit{dataset} que apresentava os valores do atributo \textit{atmosphere}, tendo-se usado $80\%$ dos dados para treino. Após feita a previsão dos \textit{missing values}, procedeu-se à previsão dos \textit{missing values} do atributo \textit{rain}, tendo-se utilizado o mesmo raciocínio.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{final}
+	\includegraphics[width=15cm]{final}
 	\caption{Previsão de \textit{missing values}.}
 \end{figure}
 
