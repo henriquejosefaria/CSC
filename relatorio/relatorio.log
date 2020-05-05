@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  28 APR 2020 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  5 MAY 2020 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -358,90 +358,108 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
  [2]
 [3]
-Overfull \hbox (8.83679pt too wide) in paragraph at lines 195--196
+<Traffic_Incidents.png, id=28, 577.15625pt x 404.51125pt>
+File: Traffic_Incidents.png Graphic file (type png)
+<use Traffic_Incidents.png>
+Package pdftex.def Info: Traffic_Incidents.png  used on input line 199.
+(pdftex.def)             Requested size: 284.52756pt x 199.42201pt.
+ [4]
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+[5 <./Traffic_Incidents.png>]
+Overfull \hbox (8.83679pt too wide) in paragraph at lines 249--250
 []\OT1/cmr/m/n/12 Come^^Xcou-se por fa-zer o tra-ta-mento do \OT1/cmr/m/it/12 d
 a-ta-set We-ather[]Descriptions[]Braga\OT1/cmr/m/n/12 ,
  []
 
-<weather.png, id=28, 534.99875pt x 262.9825pt>
+<weather.png, id=39, 534.99875pt x 262.9825pt>
 File: weather.png Graphic file (type png)
 <use weather.png>
-Package pdftex.def Info: weather.png  used on input line 203.
+Package pdftex.def Info: weather.png  used on input line 257.
 (pdftex.def)             Requested size: 284.52756pt x 139.8656pt.
-[4]
-Overfull \hbox (37.33687pt too wide) in paragraph at lines 207--208
+[6]
+Overfull \hbox (37.33687pt too wide) in paragraph at lines 261--262
 []\OT1/cmr/m/n/12 De se-guida, procedeu-se ^^Ra pre-para^^Xc~ao do \OT1/cmr/m/i
 t/12 da-ta-set Traf-fic[]Flow[]Braga\OT1/cmr/m/n/12 , procedendo-
  []
 
-<join.png, id=32, 651.43375pt x 408.52625pt>
+<join.png, id=43, 651.43375pt x 408.52625pt>
 File: join.png Graphic file (type png)
 <use join.png>
-Package pdftex.def Info: join.png  used on input line 211.
+Package pdftex.def Info: join.png  used on input line 265.
 (pdftex.def)             Requested size: 284.52756pt x 178.43681pt.
 
-Overfull \hbox (29.53166pt too wide) in paragraph at lines 215--216
+Overfull \hbox (29.53166pt too wide) in paragraph at lines 269--270
 []\OT1/cmr/m/n/12 Ap^^Sos a jun^^Xc~ao dos \OT1/cmr/m/it/12 da-ta-sets\OT1/cmr/
 m/n/12 , eliminou-se a co-luna \OT1/cmr/m/it/12 cre-a-tion[]date \OT1/cmr/m/n/1
 2 e transformaram-
  []
 
 
-Overfull \hbox (22.19423pt too wide) in paragraph at lines 215--216
+Overfull \hbox (22.19423pt too wide) in paragraph at lines 269--270
 \OT1/cmr/m/n/12 ($"\OML/cmm/m/it/12 trovoada com chuva fraca\OT1/cmr/m/n/12 " \
 OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 chuva fraca\OT1/cmr/m/n/12 
 "$, $"\OML/cmm/m/it/12 trovoada com chuva forte\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/
 12 !
  []
 
-[5 <./weather.png> <./join.png>]
-<prep.png, id=39, 1257.69875pt x 117.43875pt>
+[7 <./weather.png> <./join.png>]
+<prep.png, id=49, 1202.4925pt x 123.46124pt>
 File: prep.png Graphic file (type png)
 <use prep.png>
-Package pdftex.def Info: prep.png  used on input line 228.
-(pdftex.def)             Requested size: 426.79134pt x 39.85158pt.
+Package pdftex.def Info: prep.png  used on input line 284.
+(pdftex.def)             Requested size: 426.79134pt x 43.81868pt.
 
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 228--229
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 284--285
  [][] 
  []
 
-<incident.png, id=40, 474.77374pt x 145.54375pt>
-File: incident.png Graphic file (type png)
-<use incident.png>
-Package pdftex.def Info: incident.png  used on input line 236.
-(pdftex.def)             Requested size: 284.52756pt x 87.22697pt.
-[6 <./prep.png> <./incident.png>]
-<final.png, id=46, 1324.95pt x 488.82625pt>
+<Incident.png, id=50, 463.7325pt x 212.795pt>
+File: Incident.png Graphic file (type png)
+<use Incident.png>
+Package pdftex.def Info: Incident.png  used on input line 292.
+(pdftex.def)             Requested size: 284.52756pt x 130.56454pt.
+[8 <./prep.png> <./Incident.png>]
+<final.png, id=56, 1331.97626pt x 333.245pt>
 File: final.png Graphic file (type png)
 <use final.png>
-Package pdftex.def Info: final.png  used on input line 246.
-(pdftex.def)             Requested size: 426.79134pt x 157.45691pt.
+Package pdftex.def Info: final.png  used on input line 304.
+(pdftex.def)             Requested size: 426.79134pt x 106.77786pt.
 
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 246--247
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 304--305
  [][] 
  []
 
-[7 <./final.png>] (./relatorio.aux) ) 
+<fim.png, id=57, 303.1325pt x 139.52126pt>
+File: fim.png Graphic file (type png)
+<use fim.png>
+Package pdftex.def Info: fim.png  used on input line 312.
+(pdftex.def)             Requested size: 142.26378pt x 65.47919pt.
+[9 <./final.png> <./fim.png>] [10] (./relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 6088 strings out of 494091
- 87292 string characters out of 6163523
- 163049 words of memory out of 5000000
- 9660 multiletter control sequences out of 15000+600000
- 11534 words of font info for 42 fonts, out of 8000000 for 9000
+ 6561 strings out of 494091
+ 91641 string characters out of 6163523
+ 235618 words of memory out of 5000000
+ 10125 multiletter control sequences out of 15000+600000
+ 11871 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 42i,6n,40p,811b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018basic/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2018basic/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018basi
-c/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018b
-asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/20
-18basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relatorio.pdf (9 pages, 718074 bytes).
+ 42i,6n,42p,811b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018b
+asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2
+018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/tex
+live/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local
+/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
+sr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
+.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb>
+Output written on relatorio.pdf (12 pages, 878270 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

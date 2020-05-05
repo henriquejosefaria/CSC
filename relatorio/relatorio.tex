@@ -190,7 +190,61 @@ O \textit{dataset "Traffic Flow Braga" } é constituído pelos seguintes atribut
 
 \subsection{Preparação dos dados}
 
-Após análise dos quatro \textit{datasets} concluiu-se que, antes de se desenvolver o modelo para a previsão DE QQ COISA, era necessário fazer uma prévia preparação dos dados.
+Após análise dos quatro \textit{datasets} concluiu-se que, antes de se desenvolver o modelo para a previsão da \textit{feature speed\_diff}, era necessário fazer uma prévia preparação dos dados.
+
+Começou-se por fazer um prévio tratamento do \textit{dataset Traffic\_Incidents}. Para isso, quadriplicou-se esse \textit{dataset}, com o intuito de atribuir todas as ruas em estudo a todos os incidentes, para que posteriormente fosse possível avaliar a distância entre os incidentes e as ruas em estudo. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{Traffic_Incidents}
+	\caption{Preparação do \textit{dataset Traffic\_Incidentes}.}
+\end{figure}
+
+De seguida, recorrendo à latitude e longitude dos diferentes acontecimentos, calculou-se a distância dos incidentes a cada uma das ruas, para perceber quais os incidentes que podiam influenciar o \textit{speed\_diff} de uma determinada rua.
+
+\begin{lstlisting}[language=Python]
+import pandas as pd
+from math import radians, sin, cos, atan2, sqrt
+
+df = pd.read_csv('Traffic_Incidents.csv', delimiter = ',', error_bad_lines = False, encoding = 'ISO-8859-1')
+
+def distance(p1, n):
+	R = 6371.0
+	if n == 1:
+	lat2 = radians(41.548331)
+	lon2 = radians(-8.421298)
+	elif n == 2:
+	lat2 = radians(41.551356)
+	lon2 = radians(-8.420001)
+	elif n == 3:
+	lat2 = radians(41.546639)
+	lon2 = radians(-8.433517)
+	else:
+	lat2 = radians(41.508849)
+	lon2 = radians(-8.462299)
+	lat1, lon1 = radians(p1[0]), radians(p1[1])
+	dlon = lon2 - lon1
+	dlat = lat2 - lat1
+	a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+	c = 2 * atan2(sqrt(a), sqrt(1 - a))
+	distance = R * c
+return distance
+
+df['Distance'] = df.apply(lambda row: distance((row['latitude'],row['longitude']), row['road_num']), axis=1)
+\end{lstlisting}
+
+Após calculadas todas as distâncias fez-se um tratamento estatístico, tendo-se obtido os seguintes resultados:
+
+\begin{itemize}
+	\item ${max}= 6313,251$;
+	\item ${min}= 0,0228$;
+	\item ${mean}= 4,507$;
+	\item ${standard \ deviation}= 81,789$.
+\end{itemize}
+
+Através dos resultados obtidos é possível verificar que existem \textit{outliers}, uma vez que, sendo os dados recolhidos referentes apenas à cidade de Braga era impossível que a distância máxima dos incidentes às ruas fosse de cerca de $6313$ km. Devido a este facto, optou-se por remover alguns dados do \textit{dataset}. Uma vez que a distância é medida em linha reta utilizou-se como \textit{threshold}, para remover dados, vários valores, nomeadamente, $0,5$, $1$ e $1,5$.
+
+Após feito este tratamento procedeu-se à preparação dos dados referentes aos restantes \textit{datasets}, com o intuito de se obter, no final, um único \textit{dataset}.
 
 Começou-se por fazer o tratamento do \textit{dataset Weather\_Descriptions\_Braga}, tendo-se removido as colunas: \textit{city\_name}, \textit{snow} e \textit{cloudiness}. A coluna \textit{snow} apresentava apenas \textit{missing values}, daí se ter optado pela sua remoção. Relativamente à  coluna \textit{cloudiness}, optou-se por fazer a remoção da mesma, uma vez que existe uma coluna que está diretamente relacionada com esta, a coluna \textit{cloud}, e que não apresenta \textit{missing values}.
 
@@ -204,7 +258,7 @@ De modo a unir o resultado da preparação dos dados feita para os \textit{datas
 	\caption{Preparação dos \textit{datasets Weather\_Descriptions\_Braga} e \textit{Weather\_Braga}.}
 \end{figure}
 
-De seguida, procedeu-se à preparação do \textit{dataset Traffic\_Flow\_Braga}, procedendo-se à remoção das colunas \textit{city\_name} e \textit{road\_name}, seguida da extração da data e hora e agrupamento dos dados por \textit{road\_num}, hora, dia do mês e mês. De modo a juntar este \textit{dataset} ao obtido anteriormente, recorreu-se ao nodo \textit{Joiner}, unindo-se os \textit{datasets} por hora, dia do mês e mês.
+De seguida, procedeu-se à preparação do \textit{dataset Traffic\_Flow\_Braga}, procedendo-se à remoção das colunas \textit{city\_name} e \textit{road\_name}, seguida da extração da data e hora e agrupamento dos dados por \textit{road\_num}, hora, dia do mês e mês. De modo a juntar este \textit{dataset} ao obtido anteriormente, recorreu-se ao nodo \textit{Joiner}, unindo-se os \textit{datasets} por hora, dia do mês e mês, fazendo-se um \textit{Left Outer Join}.
 
 \begin{figure}[H]
 	\centering
@@ -223,21 +277,25 @@ Após a junção dos \textit{datasets}, eliminou-se a coluna \textit{creation\_d
 	\item muito nublado: $[85,+\inf[$;
 \end{enumerate}
 
+Tendo-se, de seguida, eliminado as colunas \textit{sunrise}, \textit{sunset} e \textit{clouds}.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{prep}
 	\caption{Preparação dos dados.}
 \end{figure}
 
-Por fim, tratou-se o \textit{dataset Traffic\_Incidents\_Braga}, procedendo-se à extração do dia e da hora e removendo-se as colunas \textit{cause\_of\_accidents} e \textit{affected\_roads}. Após tratado este \textit{dataset}, e recorrendo ao nodo \textit{Joiner}, uniu-se este \textit{dataset} com o obtido anteriormente por hora, dia do mês e mês. Deste modo, uniram-se os $4$ \textit{datasets} iniciais num único.
+Por fim, tratou-se o \textit{dataset} obtido após feito o tratamento do \textit{dataset Traffic\_Incidents}. Procedeu-se à extração do dia e da hora e removeram-se as colunas irrelevantes. Após tratado este \textit{dataset}, e recorrendo ao nodo \textit{Joiner}, uniu-se este \textit{dataset} com o obtido anteriormente por hora, dia do mês, mês e \textit{road\_num}. Deste modo, uniram-se os $4$ \textit{datasets} iniciais num único.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{incident}
-	\caption{Preparação do \textit{dataset Traffic\_Incidents\_Braga}.}
+	\includegraphics[width=10cm]{Incident}
+	\caption{Preparação do \textit{dataset} resultante do tratamento do \textit{dataset Traffic\_Incidents\_Braga}.}
 \end{figure}
 
-Após se ter apenas um \textit{dataset}, e tendo em conta que as colunas \textit{atmosphere} e \textit{rain} apresentam muitos \textit{missing values}, procedeu-se ao tratamento dos mesmos.
+Após se ter apenas um \textit{dataset} eliminaram-se colunas que se acharam irrelevantes, servindo como apoio à decisão o nodo \textit{Rank Correlation}, e aos valores \textit{Undefined} da \textit{feature descriptions} atribui-se o valor \textit{Unknown Delay}, com o objetivo de diminuir a quantidade de atributos desta \textit{feature}.
+
+De seguida, e tendo em conta que as colunas \textit{atmosphere} e \textit{rain} apresentam muitos \textit{missing values}, procedeu-se ao tratamento dos mesmos. 
 
 Começou-se, então, por tratar os \textit{missing values} da coluna \textit{atmosphere}, tendo-se separado o \textit{dataset} em dois, recorrendo ao nodo \textit{Rule-based Row Splitter}. Um \textit{dataset} apresenta a coluna \textit{atmosphere} apenas com \textit{missing values} e o outro apresenta a coluna \textit{atmosphere} com os vários valores. De seguida, utilizaram-se \textit{Random Forest} para fazer a previsão dos \textit{missing values}, para isso, particionou-se o \textit{dataset} que apresentava os valores do atributo \textit{atmosphere}, tendo-se usado $80\%$ dos dados para treino. Após feita a previsão dos \textit{missing values}, procedeu-se à previsão dos \textit{missing values} do atributo \textit{rain}, tendo-se utilizado o mesmo raciocínio.
 
@@ -247,8 +305,35 @@ Começou-se, então, por tratar os \textit{missing values} da coluna \textit{atm
 	\caption{Previsão de \textit{missing values}.}
 \end{figure}
 
-\begin{center}
-	------------------------ Python ------------------------
-\end{center}
+Por fim, recorrendo ao nodo \textit{Duplicate Row Filter}, eliminaram-se linhas repetidas, efetuou-se o \textit{Label Encoding} dos valores que estavam em \textit{string} e trataram-se os \textit{missing values}, substituindo-os por um valor \textit{default}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{fim}
+	\caption{Tratamento final.}
+\end{figure}
+
+Para finalizar o tratamento de dados foi ainda necessário perceber quais os dias que estavam com falta de dados, procedendo-se à eliminação destes, com o intuito de se ter um \textit{dataset} sem "buracos". Para isso, implementou-se o seguinte algoritmo:
+
+\begin{lstlisting}[language=Python]
+i=0
+for i in range(1,13):
+	for j in range(1,32):
+	L=df[(df['Month (number)']==i)&(df['Day of month']==j)].dropna()
+	L1=L[['Month (number)','Day of month','Hour','road_num']]
+	L1 = L1.drop_duplicates()
+	indexNames = df[(df['Month (number)']==i)&(df['Day of month']==j) ].index
+	if len(L1)>96:
+	if (len(L1)>=92 and len(L1)<96):
+		i=i+1
+	if len(L1)<96:
+	try:
+		df.drop(indexNames, inplace=True)
+	except:
+		pass
+\end{lstlisting}
+
+Após feito todo o tratamento acima mencionado, o \textit{dataset} está pronto para ser aplicado a uma rede que permita prever a \textit{feature speed\_diff}.
+
 
 \end{document}
