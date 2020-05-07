@@ -42,7 +42,7 @@ from keras.models import Sequential
 from keras.layers import LSTM,Dense ,Dropout
 
 
-df = pd.read_csv('Dataset_Finalissimo.csv', delimiter = ',',
+df = pd.read_csv('Dataset_7MAIO.csv', delimiter = ',',
                  encoding = 'ISO-8859-1')
 
 # Ordenar por mês, dia e hora.
@@ -118,7 +118,7 @@ print('x_train',len(x_train),len(x_train[0]))
 sc1 = MinMaxScaler(feature_range=(0,1))
 y_train = sc1.fit_transform(y_train)
 
-'''
+
 regressor = Sequential()
 regressor.add(LSTM(units=24*7, return_sequences=True, input_shape = (168,17) ) )
 regressor.add(Dropout(0.2))
@@ -132,7 +132,7 @@ regressor.add(Dense(24,activation='sigmoid'))
 regressor.compile(optimizer='adam', loss='mean_squared_error',metrics=['acc'])
 regressor.fit(x_train, y_train, epochs=1 )
 
-'''
+
 ##############################
 # read test dataset
 testdataset = df_1_test
