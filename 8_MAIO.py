@@ -12,6 +12,7 @@ from sklearn.preprocessing import MinMaxScaler
 from tensorflow.compat.v1.keras.layers import CuDNNLSTM
 
 
+
 df = pd.read_csv('Dataset_7MAIO.csv', delimiter = ',',
                  encoding = 'ISO-8859-1')
 
@@ -61,22 +62,50 @@ n_past = 24*7 # Past 30 days
 
 label = df_1_train['speed_diff']
 
+
 for i in range(0,len(df_1_train)-n_past-n_future+1):
+  dias = df_1_train.iloc[i : i + n_past+24]
+  mes = dias.iloc[0]['Month (number)']
+  dia_1 = dias.iloc[0]['Day of month']
+  dia_168 = dias.iloc[168]['Day of month']
+  if (mes == 4 or mes == 6 or mes == 9 or mes == 11) and (dia_168 - dia_1 == 7 or dia_168 - dia_1 == -25):
     x_train.append(df_1_train.iloc[i : i + n_past])
     y_train.append(label.iloc[i + n_past : i + n_past + n_future ])
+  elif (mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12) and (dia_168 - dia_1 == 7 or dia_168 - dia_1 == -24):
+    x_train.append(df_1_train.iloc[i : i + n_past])
+    y_train.append(label.iloc[i + n_past : i + n_past + n_future ])
+  elif mes == 2 and (dia_168 - dia_1 == 7 or dia_168 - dia_1 == -22):
+    x_train.append(df_1_train.iloc[i : i + n_past])
+    y_train.append(label.iloc[i + n_past : i + n_past + n_future ])
+'''x_train1=[]
+y_train1=[]
+for i in range(len(x_train)-1):
+  x_train1.append(x_train[i]+x_train[i+1])
+  y_train1.append(y_train[i]+y_train[i+1])
+print(x_train1[0].size)
+print(len(x_train1))
+x_train=x_train1
+y_train=y_train1'''
+
+
 for i in range(len(x_train)):
     x_train[i]=np.array(x_train[i])
 for i in range(len(y_train)):
     y_train[i]=np.array(y_train[i])
 for i in range(len(x_train)):
-
-    x_train[i] = np.reshape(x_train[i], (x_train[0].shape[0] , x_train[0].shape[1]) )
+    x_train[i]=np.array(x_train[i])
+for i in range(len(y_train)):
+    y_train[i]=np.array(y_train[i])
+for i in range(len(x_train)):
+    x_train[i] = np.reshape(x_train[i], (x_train[0].shape[0],x_train[0].shape[1]) )
 
 for i in range(len(y_train)):
     y_train[i] = np.reshape(y_train[i], (y_train[0].shape[0]))
 
 x_train=np.array(x_train)
 y_train=np.array(y_train)
+
+
 scalers=[]
 for i in range(17):
 
@@ -90,17 +119,17 @@ y_train = sc1.fit_transform(y_train)
 
 
 regressor = Sequential()
-regressor.add(LSTM(units=24*7, return_sequences=True, input_shape = (168,17) ) )
+regressor.add(CuDNNLSTM(units=24*7, return_sequences=True, input_shape = (168,17) ) )
 regressor.add(Dropout(0.2))
-regressor.add(LSTM(24*7 , return_sequences=True))
+regressor.add(CuDNNLSTM(24*7 , return_sequences=True))
 regressor.add(Dropout(0.2))
-regressor.add(LSTM(24*7, return_sequences=True))
+regressor.add(CuDNNLSTM(24*7, return_sequences=True))
 regressor.add(Dropout(0.2))
-regressor.add(LSTM(24*7))
+regressor.add(CuDNNLSTM(24*7))
 regressor.add(Dropout(0.2))
 regressor.add(Dense(24,activation='sigmoid'))
 regressor.compile(optimizer='adam', loss='mean_squared_error',metrics=['acc'])
-regressor.fit(x_train, y_train, epochs=1 )
+regressor.fit(x_train, y_train, epochs=10 )
 
 
 ##############################
@@ -145,7 +174,7 @@ for i in range(len(y_real)):
 for i in range(17):
   x_test[:,i] = scalers[i].fit_transform(x_test[:,i])
 
-print(y_real)
+
 
 print('############################')
 
