@@ -119,6 +119,7 @@ for i in range(0,len(df_1)-n_past-n_future+1):
     a.drop('incident_category_desc', axis = 1, inplace = True)
     x_train.append(a)
     y_train.append(label.iloc[i + n_past : i + n_past + n_future ])
+
 '''x_train1=[]
 y_train1=[]
 for i in range(len(x_train)-1):

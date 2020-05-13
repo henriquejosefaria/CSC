@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  9 MAY 2020 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  13 MAY 2020 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -371,152 +371,159 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 <EUA.png, id=39, 2328.7pt x 815.045pt>
 File: EUA.png Graphic file (type png)
 <use EUA.png>
-Package pdftex.def Info: EUA.png  used on input line 249.
+Package pdftex.def Info: EUA.png  used on input line 253.
 (pdftex.def)             Requested size: 398.33858pt x 139.41394pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 249--250
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 253--254
  [][] 
  []
 
-
-Overfull \hbox (8.83679pt too wide) in paragraph at lines 257--258
+[6 <./EUA.png>]
+Overfull \hbox (8.83679pt too wide) in paragraph at lines 261--262
 []\OT1/cmr/m/n/12 Come^^Xcou-se por fa-zer o tra-ta-mento do \OT1/cmr/m/it/12 d
 a-ta-set We-ather[]Descriptions[]Braga\OT1/cmr/m/n/12 ,
  []
 
-[6 <./EUA.png>]
 <weather.png, id=44, 534.99875pt x 262.9825pt>
 File: weather.png Graphic file (type png)
 <use weather.png>
-Package pdftex.def Info: weather.png  used on input line 265.
+Package pdftex.def Info: weather.png  used on input line 269.
 (pdftex.def)             Requested size: 284.52756pt x 139.8656pt.
 
-Overfull \hbox (37.33687pt too wide) in paragraph at lines 269--270
+Overfull \hbox (37.33687pt too wide) in paragraph at lines 273--274
 []\OT1/cmr/m/n/12 De se-guida, procedeu-se ^^Ra pre-para^^Xc~ao do \OT1/cmr/m/i
 t/12 da-ta-set Traf-fic[]Flow[]Braga\OT1/cmr/m/n/12 , procedendo-
  []
 
-
-Overfull \hbox (6.44206pt too wide) in paragraph at lines 271--272
-\OT1/cmr/m/it/12 We-ather[]Braga\OT1/cmr/m/n/12 , optou-se por agru-par os re-g
-is-tos do \OT1/cmr/m/it/12 da-ta-set Traf-fic[]Flow[]Braga
- []
-
-<join.png, id=45, 651.43375pt x 408.52625pt>
+[7 <./weather.png>]
+<join.png, id=49, 651.43375pt x 408.52625pt>
 File: join.png Graphic file (type png)
 <use join.png>
-Package pdftex.def Info: join.png  used on input line 277.
+Package pdftex.def Info: join.png  used on input line 281.
 (pdftex.def)             Requested size: 284.52756pt x 178.43681pt.
-[7 <./weather.png>]
-Overfull \hbox (29.53166pt too wide) in paragraph at lines 281--282
+
+Overfull \hbox (29.53166pt too wide) in paragraph at lines 285--286
 []\OT1/cmr/m/n/12 Ap^^Sos a jun^^Xc~ao dos \OT1/cmr/m/it/12 da-ta-sets\OT1/cmr/
 m/n/12 , eliminou-se a co-luna \OT1/cmr/m/it/12 cre-a-tion[]date \OT1/cmr/m/n/1
 2 e transformaram-
  []
 
 
-Overfull \hbox (22.19423pt too wide) in paragraph at lines 281--282
-\OT1/cmr/m/n/12 ($"\OML/cmm/m/it/12 trovoada com chuva fraca\OT1/cmr/m/n/12 " \
-OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 chuva fraca\OT1/cmr/m/n/12 
-"$, $"\OML/cmm/m/it/12 trovoada com chuva forte\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/
-12 !
+Overfull \hbox (33.58331pt too wide) in paragraph at lines 285--286
+\OT1/cmr/m/n/12 chuva. De se-guida, alteraram-se al-guns dos va-lo-res ($"\OML/
+cmm/m/it/12 trovoada com chuva fraca\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/12 !
+ []
+
+
+Overfull \hbox (11.5583pt too wide) in paragraph at lines 285--286
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 chuva fraca\OT1/cmr/m/n/12 "$, $"\OML/cmm/m/i
+t/12 trovoada com chuva forte\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/
+12 "\OML/cmm/m/it/12 chuva forte\OT1/cmr/m/n/12 "$ e $"\OML/cmm/m/it/12 trovoad
+a\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/12 !
  []
 
 <prep.png, id=50, 1334.9875pt x 150.5625pt>
 File: prep.png Graphic file (type png)
 <use prep.png>
-Package pdftex.def Info: prep.png  used on input line 285.
+Package pdftex.def Info: prep.png  used on input line 289.
 (pdftex.def)             Requested size: 426.79134pt x 48.13272pt.
 
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 285--286
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 289--290
  [][] 
  []
 
-<Incident.png, id=51, 463.7325pt x 212.795pt>
+[8 <./join.png> <./prep.png>]
+<Incident.png, id=56, 463.7325pt x 212.795pt>
 File: Incident.png Graphic file (type png)
 <use Incident.png>
-Package pdftex.def Info: Incident.png  used on input line 293.
+Package pdftex.def Info: Incident.png  used on input line 301.
 (pdftex.def)             Requested size: 284.52756pt x 130.56454pt.
-[8 <./join.png> <./prep.png>]
 <rank.png, id=57, 554.07pt x 641.39626pt>
 File: rank.png Graphic file (type png)
 <use rank.png>
-Package pdftex.def Info: rank.png  used on input line 301.
+Package pdftex.def Info: rank.png  used on input line 309.
 (pdftex.def)             Requested size: 284.52756pt x 329.36853pt.
- [9 <./Incident.png> <./rank.png>]
-<tunning.png, id=63, 1282.7925pt x 349.305pt>
+ [9 <./Incident.png>]
+<tunning.png, id=62, 1282.7925pt x 349.305pt>
 File: tunning.png Graphic file (type png)
 <use tunning.png>
-Package pdftex.def Info: tunning.png  used on input line 315.
+Package pdftex.def Info: tunning.png  used on input line 323.
 (pdftex.def)             Requested size: 426.79134pt x 116.2144pt.
-
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 315--316
- [][] 
- []
-
-<melhores_params.png, id=64, 629.35126pt x 230.8625pt>
-File: melhores_params.png Graphic file (type png)
-<use melhores_params.png>
-Package pdftex.def Info: melhores_params.png  used on input line 323.
-(pdftex.def)             Requested size: 426.79134pt x 156.55817pt.
 
 Overfull \hbox (36.79134pt too wide) in paragraph at lines 323--324
  [][] 
  []
 
-[10 <./tunning.png> <./melhores_params.png>]
-<atmos.png, id=70, 638.385pt x 260.975pt>
-File: atmos.png Graphic file (type png)
-<use atmos.png>
-Package pdftex.def Info: atmos.png  used on input line 331.
-(pdftex.def)             Requested size: 426.79134pt x 174.47403pt.
+[10 <./rank.png>]
+<melhores_params.png, id=67, 629.35126pt x 230.8625pt>
+File: melhores_params.png Graphic file (type png)
+<use melhores_params.png>
+Package pdftex.def Info: melhores_params.png  used on input line 331.
+(pdftex.def)             Requested size: 426.79134pt x 156.55817pt.
 
 Overfull \hbox (36.79134pt too wide) in paragraph at lines 331--332
  [][] 
  []
 
+<atmos.png, id=68, 638.385pt x 260.975pt>
+File: atmos.png Graphic file (type png)
+<use atmos.png>
+Package pdftex.def Info: atmos.png  used on input line 339.
+(pdftex.def)             Requested size: 426.79134pt x 174.47403pt.
 
-Overfull \hbox (14.84915pt too wide) in paragraph at lines 335--336
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 339--340
+ [][] 
+ []
+
+[11 <./tunning.png> <./melhores_params.png>]
+Overfull \hbox (14.84915pt too wide) in paragraph at lines 343--344
 []\OT1/cmr/m/n/12 Ap^^Sos feita a pre-vis~ao dos \OT1/cmr/m/it/12 mis-sing va-l
 ues \OT1/cmr/m/n/12 para a \OT1/cmr/m/it/12 fe-a-ture at-mosphere\OT1/cmr/m/n/1
 2 , procedeu-
  []
 
-<fim.png, id=71, 495.8525pt x 165.61874pt>
+<fim.png, id=75, 495.8525pt x 165.61874pt>
 File: fim.png Graphic file (type png)
 <use fim.png>
-Package pdftex.def Info: fim.png  used on input line 345.
-(pdftex.def)             Requested size: 142.26378pt x 47.51772pt.
-[11 <./atmos.png> <./fim.png>]
-<mes_dias.png, id=78, 560.0925pt x 301.125pt>
+Package pdftex.def Info: fim.png  used on input line 353.
+(pdftex.def)             Requested size: 227.62204pt x 76.02632pt.
+[12 <./atmos.png>]
+<mes_dias.png, id=80, 560.0925pt x 301.125pt>
 File: mes_dias.png Graphic file (type png)
 <use mes_dias.png>
-Package pdftex.def Info: mes_dias.png  used on input line 353.
+Package pdftex.def Info: mes_dias.png  used on input line 361.
 (pdftex.def)             Requested size: 227.62204pt x 122.37767pt.
- [12 <./mes_dias.png>] [13] (./relatorio.aux) ) 
+ [13 <./fim.png> <./mes_dias.png>]
+
+LaTeX Warning: Reference `label' on page 14 undefined on input line 390.
+
+[14] [15] (./relatorio.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6598 strings out of 494091
- 92147 string characters out of 6163523
- 271618 words of memory out of 5000000
- 10157 multiletter control sequences out of 15000+600000
+ 6600 strings out of 494091
+ 92160 string characters out of 6163523
+ 275793 words of memory out of 5000000
+ 10159 multiletter control sequences out of 15000+600000
  11871 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 42i,6n,42p,734b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018basic/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018basi
-c/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/20
-18basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texliv
-e/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/tex
-live/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
-usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
-b>
-Output written on relatorio.pdf (15 pages, 1712765 bytes).
+ 42i,6n,42p,969b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbxti10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on relatorio.pdf (17 pages, 1722363 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -192,7 +192,7 @@ O \textit{dataset "Traffic Flow Braga" } é constituído pelos seguintes atribut
 
 Após análise dos quatro \textit{datasets} concluiu-se que, antes de se desenvolver o modelo para a previsão da \textit{feature speed\_diff}, era necessário fazer uma prévia preparação dos dados.
 
-Começou-se por fazer um prévio tratamento do \textit{dataset Traffic\_Incidents}. Para isso, quadriplicou-se esse \textit{dataset}, com o intuito de atribuir todas as ruas em estudo a todos os incidentes, para que posteriormente fosse possível avaliar a distância entre os incidentes e as ruas em estudo. 
+Começou-se por fazer um tratamento inicial do \textit{dataset Traffic\_Incidents}. Para isso, a cada incidente atribuiu-se os vários valores da coluna \textit{road\_num}, para que posteriormente fosse possível avaliar a distância entre os incidentes e as ruas em estudo e verificar de que forma estes incidentes afetam uma determinada rua.
 
 \begin{figure}[H]
 	\centering
@@ -200,7 +200,11 @@ Começou-se por fazer um prévio tratamento do \textit{dataset Traffic\_Incident
 	\caption{Preparação do \textit{dataset Traffic\_Incidentes}.}
 \end{figure}
 
-De seguida, recorrendo à latitude e longitude dos diferentes acontecimentos, calculou-se a distância dos incidentes a cada uma das ruas, para perceber quais os incidentes que podiam influenciar o \textit{speed\_diff} de uma determinada rua.
+De seguida, recorrendo à latitude e longitude dos diferentes acontecimentos, calculou-se a distância dos incidentes a cada uma das ruas, para perceber o raio de influência dos incidentes para as ruas em estudo, de modo, a ser possível, posteriormente, remover incidentes que se encontrem muito afastados das ruas em estudo. Para isso, recorreu-se à fórmula:
+
+$$FORMULA \ DISTANCIA$$
+
+tendo-se implementado o seguinte código.
 
 \begin{lstlisting}[language=Python]
 import pandas as pd
@@ -242,7 +246,7 @@ Após calculadas todas as distâncias fez-se um tratamento estatístico, tendo-s
 	\item ${standard \ deviation}= 81,789$.
 \end{itemize}
 
-Através dos resultados obtidos é possível verificar que existem dados errados, uma vez que, sendo os dados recolhidos referentes apenas à cidade de Braga era impossível que a distância máxima dos incidentes às ruas fosse de cerca de $6313$ km. Fez-se um estudo desta informação e verificou-se que estes dados dizem respeito a uma cidade que não pertence a Braga.
+Através dos resultados obtidos é possível verificar que existem dados mal classificados, uma vez que, sendo os dados recolhidos referentes apenas à cidade de Braga era impossível que a distância máxima dos incidentes às ruas fosse de cerca de $6313$ km. Fez-se um estudo desta informação e verificou-se que estes dados dizem respeito a uma cidade que não pertence a Braga.
 
 \begin{figure}[H]
 	\centering
@@ -250,15 +254,15 @@ Através dos resultados obtidos é possível verificar que existem dados errados
 	\caption{Dado mal classificado.}
 \end{figure}
 
-Devido a este facto, optou-se por remover alguns dados do \textit{dataset}. Uma vez que a distância é medida em linha reta utilizou-se como \textit{threshold}, para remover dados, vários valores, nomeadamente, $0,5$, $1$ e $1,5$.
+Devido a este facto, optou-se por remover alguns dados do \textit{dataset}. Uma vez que a distância é medida em linha reta utilizou-se como \textit{threshold}, para remover dados, vários valores, nomeadamente, $0.5$, $1$ e $1.5$.
 
 Após feito este tratamento procedeu-se à preparação dos dados referentes aos restantes \textit{datasets}, com o intuito de se obter, no final, um único \textit{dataset}.
 
-Começou-se por fazer o tratamento do \textit{dataset Weather\_Descriptions\_Braga}, tendo-se removido as colunas: \textit{city\_name}, \textit{snow} e \textit{cloudiness}. A coluna \textit{snow} apresentava apenas \textit{missing values}, daí se ter optado pela sua remoção. Relativamente à  coluna \textit{cloudiness}, optou-se por fazer a remoção da mesma, uma vez que existe uma coluna que está diretamente relacionada com esta, a coluna \textit{cloud}, e que não apresenta \textit{missing values}.
+Começou-se por fazer o tratamento do \textit{dataset Weather\_Descriptions\_Braga}, tendo-se removido as colunas: \textit{city\_name}, \textit{snow} e \textit{cloudiness}. A coluna \textit{snow} apresentava apenas \textit{missing values}, daí se ter optado pela sua remoção. Relativamente à  coluna \textit{cloudiness}, optou-se por fazer a remoção da mesma, uma vez que existe uma coluna que está diretamente relacionada com esta, a coluna \textit{cloud}, pertencente ao \textit{dataset Weather\_Braga}, e que não apresenta \textit{missing values}.
 
 De seguida, procedeu-se à remoção das colunas \textit{city\_name} e \textit{precipitation} do \textit{dataset Weather\_Braga}. A remoção da coluna \textit{precipitation} deveu-se ao facto desta apenas apresentar um único valor, o $0$. 
 
-De modo a unir o resultado da preparação dos dados feita para os \textit{datasets} anteriores, recorreu-se ao nodo \textit{Joiner}, e uniram-se os \textit{datasets} por \textit{creation\_date}, tendo-se efetuado, de seguida, a extração da data e do tempo.
+De modo a unir o resultado da preparação dos dados feita para os \textit{datasets} anteriores, recorreu-se ao nodo \textit{Joiner}, e uniram-se os \textit{datasets} por \textit{creation\_date}, tendo-se efetuado, de seguida, a extração da data e do tempo, tendo-se extraído: o mês como uma variável numérica, a hora, o dia do mês e o dia da semana.
 
 \begin{figure}[H]
 	\centering
@@ -266,11 +270,11 @@ De modo a unir o resultado da preparação dos dados feita para os \textit{datas
 	\caption{Preparação dos \textit{datasets Weather\_Descriptions\_Braga} e \textit{Weather\_Braga}.}
 \end{figure}
 
-De seguida, procedeu-se à preparação do \textit{dataset Traffic\_Flow\_Braga}, procedendo-se à remoção das colunas \textit{city\_name} e \textit{road\_name}, seguida da extração da data e hora e agrupamento dos dados por \textit{road\_num}, hora, dia do mês e mês. 
+De seguida, procedeu-se à preparação do \textit{dataset Traffic\_Flow\_Braga}, procedendo-se à remoção das colunas \textit{city\_name} e \textit{road\_name}, seguida da extração da data e hora, à semelhança do que foi feito para o \textit{dataset} anterior.
 
-O \textit{dataset Traffic\_Flow\_Braga} tinha registos de $20$ em $20$ minutos e o \textit{dataset} obtido anteriormente tinha registos de hora em hora, assim, de modo a unir o \textit{dataset} resultante de unir os \textit{datasets Weather\_Descriptions\_Braga} e \textit{Weather\_Braga}, optou-se por agrupar os registos do \textit{dataset Traffic\_Flow\_Braga} por hora.
+O \textit{dataset Traffic\_Flow\_Braga} tinha registos de $20$ em $20$ minutos e o \textit{dataset} obtido anteriormente tinha registos de hora em hora, assim, de modo a unir o \textit{dataset} com os dados relativos ao \textit{Weather}, optou-se por agrupar os registos do \textit{dataset Traffic\_Flow\_Braga} por hora, mês, dia e rua, recorrendo-se ao nodo \textit{GroupBy}, tendo-se feito a média de todos os valores numéricos para as restantes colunas.
 
-Assim, de modo a juntar este \textit{dataset} ao obtido anteriormente, recorreu-se ao nodo \textit{Joiner}, unindo-se os \textit{datasets} por hora, dia do mês e mês, fazendo-se um \textit{Left Outer Join}. Optou-se por fazer um \textit{Left Outer Join}, uma vez que não se queriam as condições atmosféricas de registos em que não havia dados de incidentes.
+Assim, de modo a juntar este \textit{dataset} ao obtido anteriormente, recorreu-se ao nodo \textit{Joiner}, unindo-se os \textit{datasets} por hora, dia do mês e mês, fazendo-se um \textit{Left Outer Join}. Optou-se por fazer um \textit{Left Outer Join}, uma vez que não se queriam as condições atmosféricas de registos em que não havia dados de tráfego.
 
 \begin{figure}[H]
 	\centering
@@ -278,7 +282,7 @@ Assim, de modo a juntar este \textit{dataset} ao obtido anteriormente, recorreu-
 	\caption{Preparação do \textit{dataset Traffic\_Flow\_Braga}.}
 \end{figure}
 
-Após a junção dos \textit{datasets}, eliminou-se a coluna \textit{creation\_date} e transformaram-se os valores "N/A", das colunas \textit{rain}, \textit{thunderstorm} e \textit{atmosphere}, em \textit{missing values}, recorrendo ao nodo \textit{String Manipulation}. De seguida, fez-se um \textit{merge} das colunas \textit{rain} e \textit{thunderstorm}, tendo-se alterado alguns dos valores ($"trovoada \ com \ chuva \ fraca" \rightarrow "chuva \ fraca"$, $"trovoada \ com \ chuva \ forte" \rightarrow "chuva \ forte"$ e $"trovoada" \rightarrow "chuva"$), tendo-se removido, no final, a coluna \textit{thunderstorm}. Por fim, eliminaram-se as colunas \textit{sunrise} e \textit{sunset}.
+Após a junção dos \textit{datasets}, eliminou-se a coluna \textit{creation\_date} e transformaram-se os valores "N/A", das colunas \textit{rain}, \textit{thunderstorm} e \textit{atmosphere}, em \textit{missing values}, recorrendo ao nodo \textit{String Manipulation}. De seguida, quando não existiam valores na coluna \textit{rain} atribuia-se o valor da coluna \textit{thunderstorm}, uma vez que as \textit{labels} da coluna \textit{thunderstorm} faziam referência ao estado da chuva. De seguida, alteraram-se alguns dos valores ($"trovoada \ com \ chuva \ fraca" \rightarrow "chuva \ fraca"$, $"trovoada \ com \ chuva \ forte" \rightarrow "chuva \ forte"$ e $"trovoada" \rightarrow "chuva"$), tendo-se removido, no final, a coluna \textit{thunderstorm}. Por fim, eliminaram-se as colunas \textit{sunrise} e \textit{sunset}, uma vez que não se achou que estas colunas eram relevantes para prever o \textit{speed\_diff}.
 
 \begin{figure}[H]
 	\centering
@@ -286,7 +290,11 @@ Após a junção dos \textit{datasets}, eliminou-se a coluna \textit{creation\_d
 	\caption{Preparação dos dados.}
 \end{figure}
 
-Por fim, tratou-se o \textit{dataset} cuja \textit{feature Distance} tinha apenas valores inferiores a $0,5 \ km$. Procedeu-se à extração do dia e da hora e removeram-se as colunas irrelevantes. Após tratado este \textit{dataset}, e recorrendo ao nodo \textit{Joiner}, uniu-se este \textit{dataset} com o obtido anteriormente por hora, dia do mês, mês e \textit{road\_num}. Deste modo, uniram-se os $4$ \textit{datasets} iniciais num único.
+Por fim, tratou-se o \textit{dataset Traffic\_Incidents\_Braga} cuja \textit{feature Distance} tinha apenas valores inferiores a $0.5 \ km$. Recorrendo à coluna \textit{incident\_date}, procedeu-se à extração do dia, da hora e do mês e removeram-se colunas irrelevantes, nomeadamente, as colunas \textit{city\_name}, \textit{incident\_date} e \textit{cause\_of\_incident}, uma vez que esta última apresentava maioritariamente \textit{missing values}.
+
+Uma vez que a coluna \textit{Distance} já inclui informação que permite relacionar a influência de um dado inicidente com as ruas em estudo, optou-se por remover as colunas: \textit{from\_road}, \textit{to\_road}, \textit{affected\_roads}, \textit{latitute} e \textit{longitude}.
+
+Após tratado este \textit{dataset}, e recorrendo ao nodo \textit{Joiner}, uniu-se este \textit{dataset} com o obtido anteriormente por hora, dia do mês, mês e \textit{road\_num}. Deste modo, uniram-se os $4$ \textit{datasets} iniciais num único.
 
 \begin{figure}[H]
 	\centering
@@ -294,7 +302,7 @@ Por fim, tratou-se o \textit{dataset} cuja \textit{feature Distance} tinha apena
 	\caption{Preparação do \textit{dataset} resultante do tratamento do \textit{dataset Traffic\_Incidents\_Braga}.}
 \end{figure}
 
-Após se ter apenas um \textit{dataset} eliminaram-se colunas que apresentavam uma correlação muito alta, de modo a tornar o \textit{dataset} mais pequeno. Esta análise foi efetuada recorrendo ao nodo \textit{Rank Correlation}.
+Após se ter apenas um \textit{dataset} verificou-se que este continha $26$ colunas, o que se achou serem demasiadas. Assim, de modo a tornar o \textit{dataset} mais pequeno, recorreu-se ao nodo \textit{Rank Correlation} e avaliou-se a correlação que existia entre as diferentes colunas, tendo-se removido as seguintes: \textit{free\_flow\_speed}, \textit{current\_travel\_time}, \textit{free\_flow\_travel\_time }, \textit{atmospheric\_pressure}, \textit{humidity}, \textit{current\_luminosity} e \textit{magnitude\_of\_delay\_desc}. Deste modo, o \textit{dataset} ficou apenas com $18$ colunas.
 
 \begin{figure}[H]
 	\centering
@@ -302,11 +310,11 @@ Após se ter apenas um \textit{dataset} eliminaram-se colunas que apresentavam u
 	\caption{Análise da correlação entre as diferentes \textit{features}.}
 \end{figure}
 
-Aos valores \textit{Undefined} da \textit{feature descriptions} atribui-se o valor \textit{Unknown Delay}, com o objetivo de diminuir a quantidade de atributos desta \textit{feature}.
+Aos valores \textit{Undefined} da \textit{feature descriptions} atribui-se o valor \textit{Unknown Delay}, uma vez que estes têm significado semelhante.
 
 De seguida, e tendo em conta que as colunas \textit{atmosphere} e \textit{rain} apresentam muitos \textit{missing values}, procedeu-se ao tratamento dos mesmos. 
 
-Começou-se, então, por tratar os \textit{missing values} da coluna \textit{atmosphere}, uma vez que este era o que apresentava menos \textit{missing values}, tendo-se separado o \textit{dataset} em dois, recorrendo ao nodo \textit{Rule-based Row Splitter}. Um \textit{dataset} apresenta a coluna \textit{atmosphere} apenas com \textit{missing values} e o outro apresenta a coluna \textit{atmosphere} com os vários valores. De seguida, utilizaram-se \textit{Random Forest} para fazer a previsão dos \textit{missing values}.
+Começou-se, então, por tratar os \textit{missing values} da coluna \textit{atmosphere}, uma vez que esta era a que apresentava menos \textit{missing values}, tendo-se separado o \textit{dataset} em dois, recorrendo ao nodo \textit{Rule-based Row Splitter}. Um \textit{dataset} apresenta a coluna \textit{atmosphere} apenas com \textit{missing values} e o outro apresenta a coluna \textit{atmosphere} com os vários valores. De seguida, utilizaram-se \textit{Random Forest} para fazer a previsão dos \textit{missing values}.
 
 Com o intuito de perceber quais os melhores parâmetros a utilizar efetuou-se o \textit{tunning} do modelo.
 
@@ -324,7 +332,7 @@ Após efetuado o \textit{tunning} do modelo, concluiu-se que este apresentava me
 	\caption{Melhores parâmetros para construir o modelo.}
 \end{figure}
 
-Por fim, fez-se a previsão dos \textit{missing values} da \textit{feature atmosphere}, usando $100\%$ dos dados para treinar o modelo.
+Por fim, sabendo quais os melhores parâmetros, contruiu-se um novo modelo usando $100\%$ dos dados para o treinar.
 
 \begin{figure}[H]
 	\centering
@@ -332,21 +340,21 @@ Por fim, fez-se a previsão dos \textit{missing values} da \textit{feature atmos
 	\caption{Previsão dos \textit{missing values} da \textit{feature atmosphere}.}
 \end{figure}
 
-Após feita a previsão dos \textit{missing values} para a \textit{feature atmosphere}, procedeu-se à previsão dos \textit{missing values} do atributo \textit{rain}, utilizando os mesmo parâmetros, tendo-se obtido uma \textit{accuraccy} de cerca de $97,8\%$.
+Após feita a previsão dos \textit{missing values} para a \textit{feature atmosphere}, procedeu-se à previsão dos \textit{missing values} do atributo \textit{rain}, tendo-se utilizado o mesmo esquema para obter os melhores parâmetros, tendo-se obtido uma \textit{accuraccy} de cerca de $97,8\%$.
 
-Para finalizar o tratamento de dados, no \textit{Knime}, recorrendo ao nodo \textit{Duplicate Row Filter}, eliminaram-se linhas repetidas e efetuou-se o \textit{Label Encoding} dos valores correspondentes às \textit{features}: \textit{Day of week (name)}, \textit{description}, \textit{incident\_category\_desc}, \textit{atmosphere} e \textit{rain}. 
+Para finalizar o tratamento de dados, no \textit{Knime}, recorrendo ao nodo \textit{Duplicate Row Filter}, eliminaram-se linhas repetidas e efetuou-se o \textit{Label Encoding} dos valores correspondentes às \textit{features}: \textit{Day of week (name)}, \textit{description}, \textit{incident\_category\_desc}, \textit{atmosphere} e \textit{rain}, uma vez que o objetivo é utilizar redes neuronais para prever o \textit{speed\_diff}, e estas apenas aceitam valores numéricos.
 
-De seguida, trataram-se os \textit{missing values}, substituindo-os por um valor \textit{default}. Os \textit{missing values} existentes correspondiam a dias/horas onde não tinham ocorrido incidentes.
+É de notar que, após feito todo este tratamento, existem colunas que apresentam \textit{missing values}. No entanto, estes \textit{missing values} ocorrem nas colunas correspondentes aos incidentes, porque não houve incidentes naquela hora, numa distância inferior a $0.5$ km. Estes \textit{missing values} foram substituídos por um valor \textit{default}, $-1$.
 
-Por fim, observou-se que existiam dias com horas repetidas, devido ao facto de para uma mesma hora existir mais do que um incidente. Assim, de modo a que cada dia tivesse apenas $24$ horas, recorreu-se ao nodo \textit{GroupBy} para agrupar os incidentes, optando-se por ficar com o incidente que estava mais próximo da rua em estudo, uma vez que seria esse que mais influenciaria o atributo \textit{speed\_diff}.
+Por fim, observou-se que existiam dias com horas repetidas, devido ao facto de para uma mesma hora existir mais do que um incidente. Assim, para que isto não acontecesse, recorreu-se ao nodo \textit{GroupBy} para agrupar os incidentes, optando-se por ficar com o incidente que estava mais próximo da rua em estudo, ou seja, o incidente que apresentava na coluna \textit{Distance} o valor mais baixo.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5cm]{fim}
+	\includegraphics[width=8cm]{fim}
 	\caption{Tratamento final.}
 \end{figure}
 
-Após feito este tratamento, recorrendo ao nodo \textit{Pie chart (local)} percebeu-se que o \textit{dataset} apresentava dias e horas em falta como, por exemplo, o mês de Maio.
+Após feito este tratamento, recorrendo ao nodo \textit{Pie chart (local)} percebeu-se que o \textit{dataset} apresentava dias e horas em falta como, por exemplo, o mês de Março.
 
 \begin{figure}[H]
 	\centering
@@ -354,7 +362,15 @@ Após feito este tratamento, recorrendo ao nodo \textit{Pie chart (local)} perce
 	\caption{Dias em falta no \textit{dataset}.}
 \end{figure}
 
-Deste modo, foi então necessário perceber quais os dias que estavam incompletos, ou seja, quais os dias que não tinham as $24$ horas preenchidas, procedendo-se à eliminação destes, com o intuito de se ter um \textit{dataset} sem "buracos". Para isso, implementou-se o seguinte algoritmo:
+\section{Problema}
+
+O objetivo do trabalho consiste em utilizar Redes Neuronais para fazer previsão do fluxo de tráfego rodoviário. Tendo em conta os dados disponibilizados, o grupo optou por fazer a previsão da \textit{feature speed\_diff} de uma dada rua, baseando-se em 3 dias para prever o dia seguinte. Optou-se por fazer previsões para as ruas em separado, uma vez que se acredita que o fluxo de tráfego das ruas é distinto entre elas. Para isso, dividiu-se o \textit{dataset} original em $4$, sendo que cada \textit{dataset} correspondia a uma determinada rua.
+
+Uma vez que se trata de um problema de séries temporais, optou-se por implementar um modelo \textit{multistep} e \textit{multivariate} que utiliza \textit{LSTM}'s.
+
+\subsection{Resolução do Problema}
+
+Para resolver este problema era então necessário perceber quais os dias que estavam incompletos, ou seja, quais os dias que não tinham as $24$ horas preenchidas, procedendo-se à eliminação destes, com o intuito de se ter um \textit{dataset} sem "buracos". Para isso, implementou-se o seguinte algoritmo:
 
 \begin{lstlisting}[language=Python]
 i=0
@@ -364,40 +380,49 @@ for i in range(1,13):
 	L1=L[['Month (number)','Day of month','Hour','road_num']]
 	L1 = L1.drop_duplicates()
 	indexNames = df[(df['Month (number)']==i)&(df['Day of month']==j)].index
-	if len(L1)<96:
+	if len(L1)<24:
 	try:
 		df.drop(indexNames, inplace=True)
 	except:
 		pass
 \end{lstlisting}
 
-Com o objetivo de ter a certeza que se treina o modelo com dias seguidos, desenvolveu-se o seguinte código \textit{python}:
+Visto que no final do capítulo \ref{label} verificámos que existiam dias em falta e como se pretende que sejam dados ao modelo, como \textit{input}, $3$ dias para prever o próximo, quer garantir-se que, de facto, esses $4$ dias são seguidos, ou seja, que os $3$ dias dados como \textit{input} mais o dia a prever sejam seguidos, evitando que ocorram situações em que o primeiro dia seja, por exemplo, $16$ de Janeiro e o dia a prever seja $30$ de Janeiro.
+
+Assim, para ter a certeza que se treina o modelo com dias consecutivos, percorreu-se o \textit{dataset} construindo blocos de $4$ dias, para verificar se estes $4$ dias são seguidos, calcula-se a diferença entre o último dia do bloco e o primeiro e, dependendo do mês, verifica-se se é $4$. Note-se, no entanto, que se para um dado bloco tivermos dias de meses distintos, esta diferença é negativa, sendo este problema corrigido dependendo do mês em causa.
+
+Antes de se aplicar o seguinte algoritmo, ordenou-se o \textit{dataset} por mês, dia e hora.
 
 \begin{lstlisting}[language=Python]
-n_future = 24 # next 4 days temperature forecast
-n_past = 24*7 # Past 30 days
+n_future = 24 # next 24 hours speed diff forecast
+n_past = 24*3 # Past 3 days
 
 x_train = []
 y_train = []
 label = df_1['speed_diff']
 
-
 for i in range(0,len(df_1)-n_past-n_future+1):
 	dias = df_1.iloc[i : i + n_past+24]
 	mes = dias.iloc[0]['Month (number)']
 	dia_1 = dias.iloc[0]['Day of month']
-	dia_168 = dias.iloc[168]['Day of month']
-	if (mes == 4 or mes == 6 or mes == 9 or mes == 11) and (dia_168 - dia_1 == 7 or dia_168 - dia_1 == -25):
+	dia_4 = dias.iloc[24*3+1]['Day of month']
+	if (mes == 4 or mes == 6 or mes == 9 or mes == 11) and (dia_4 - dia_1 == 3 or dia_4 - dia_1 == -29):
 		x_train.append(df_1.iloc[i : i + n_past])
 		y_train.append(label.iloc[i + n_past : i + n_past + n_future ])
-	elif (mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12) and (dia_168 - dia_1 == 7 or dia_168 - dia_1 == -24):
+	elif (mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12) and (dia_4 - dia_1 == 3 or dia_4 - dia_1 == -28):
 		x_train.append(df_1.iloc[i : i + n_past])
 		y_train.append(label.iloc[i + n_past : i + n_past + n_future ])
-	elif mes == 2 and (dia_168 - dia_1 == 7 or dia_168 - dia_1 == -22):
+	elif mes == 2 and (dia_4 - dia_1 == 3 or dia_4 - dia_1 == -26):
 		x_train.append(df_1.iloc[i : i + n_past])
 		y_train.append(label.iloc[i + n_past : i + n_past + n_future ])
 \end{lstlisting}
 
+Sabendo-se que cada \textit{input} é constituído por $3$ dias seguidos, com as $24$ horas completas e, portante, as colunas \textit{Month (number)}, \textit{Day of month} e \textit{Hour} já não são relevantes, tendo-se feito a remoção das mesmas. Além disso, removeram-se as colunas \textit{Day of week (name)}, \textit{incident\_category\_desc} e \textit{Distance}. Esta última foi removida, uma vez que apenas serviu para saber quais os incidentes que deviam permanecer no \textit{dataset}.
+
 Após feito todo o tratamento acima mencionado, o \textit{dataset} está pronto para ser aplicado a uma rede que permita prever a \textit{feature speed\_diff}.
+
+------------------------------------------------------
+
+Para fazer a previsão da \textit{feature speed\_diff} fez-se então 
 
 \end{document}
