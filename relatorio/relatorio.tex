@@ -202,7 +202,17 @@ Começou-se por fazer um tratamento inicial do \textit{dataset Traffic\_Incident
 
 De seguida, recorrendo à latitude e longitude dos diferentes acontecimentos, calculou-se a distância dos incidentes a cada uma das ruas, para perceber o raio de influência dos incidentes para as ruas em estudo, de modo, a ser possível, posteriormente, remover incidentes que se encontrem muito afastados das ruas em estudo. Para isso, recorreu-se à fórmula:
 
-$$FORMULA \ DISTANCIA$$
+$$dist(A, B) = R * \arccos (sin (lat_A) * \sin (lat_B) + \cos (lat_A) * \cos (lat_B) * \cos (lon_A-lon_B)). $$
+
+onde,
+
+\begin{itemize}
+	\item \textbf{$lat_A$:} latitude do ponto A;
+	\item \textbf{$lat_B$:} latitude do ponto B;
+	\item \textbf{$lon_A$:} longitude do ponto A;
+	\item \textbf{$lon_B$:} longitude do ponto B;
+	\item \textbf{$R$:} raio da Terra.
+\end{itemize}
 
 tendo-se implementado o seguinte código.
 
