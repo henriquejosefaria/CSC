@@ -1386,4 +1386,104 @@ Relativamente aos erros obtidos, foram os seguintes:
 
 O modelo treinado com a rua 2 é o que apresenta melhores resultados!!!!!!
 
+\subsection{\textit{Dataset} sem incidentes}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/aprend_no_inc.png}
+	\caption{Curvas de aprendizagem.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/prev_real_no_inc.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+\end{figure}
+
+Para melhor perceber os valores do gráfico, analisem-se os valores concretos, previstos e reais, para dia representado no gráfico:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline\hline
+		Hora & Real&Previsto\\
+		\hline\hline
+		0 & 0 & 6.9066814e-08 \\
+		\hline
+		1  &0 & 2.5607434e-07\\
+		\hline
+		2 & 0 & 2.7351797e-07\\
+		\hline
+		3  & 0 &2.0879885e-05 \\
+		\hline
+		4 & 0 &0.01707314 \\
+		\hline
+		5  &0  &0.09949607 \\
+		\hline
+		6 & 1.33 & 0.9240082 \\
+		\hline
+		7 & 1.67 & 1.1667032\\
+		\hline
+		8  &3.33 & 2.5204258\\
+		\hline
+		9 & 0 &  0.45500085\\
+		\hline
+		10 & 2.33 &  2.0409627 \\
+		\hline
+		11  &5.67 &3.920147 \\
+		\hline
+		12 & 6 &  4.414104\\
+		\hline
+		13  & 3.33 & 2.5295854 \\
+		\hline
+		14 & 0  & 0.12146372\\
+		\hline
+		15  & 0 &0.0020382823 \\
+		\hline
+		16 & 0 & 3.961704e-09 \\
+		\hline
+		17 & 0 & 6.731966e-08 \\
+		\hline
+		18  &0 &1.2392364e-06 \\
+		\hline
+		19 &0  & 1.6075727e-07	\\
+		\hline
+		20 & 0 & 1.254804e-06\\
+		\hline
+		21  &0 & 1.0915311e-09\\
+		\hline
+		22 & 0 & 5.4359017e-12	\\
+		\hline
+		23  & 0 & 4.7200618e-05 \\
+		\hline\hline
+	\end{tabular}
+\end{table} 
+
+Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes valores do erro, obtiveram-se os seguinte resultados:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline\hline
+		& \textit{Average Diff} & \textit{Max Diff} \\
+		\hline\hline
+		29 Segundas & 0.8580420333193335 & 3.0794863584689107\\
+		\hline
+		32 Terças  &0.8183510621136405& 3.096227680302678  \\
+		\hline
+		21 Quartas & 0.872193862194359 & 2.8067537848154704 \\
+		\hline
+		28 Quintas  & 0.8651441438734818 & 2.96524466102997\\
+		\hline
+		26 Sextas & 1.04050743303996 & 3.0716054604671785 \\
+		\hline
+		40 Sábados  & 0.5317055662987664&2.3876666585233886  \\
+		\hline
+		24 Domingos & 0.5553113784184134 & 2.172586509579598 \\
+		\hline\hline
+	\end{tabular}
+	\label{table:no_inc}
+	\caption{Cálculo dos erros.}
+\end{table}
+
 \end{document}

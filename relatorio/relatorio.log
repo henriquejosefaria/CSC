@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  15 MAY 2020 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  15 MAY 2020 20:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,17 +657,31 @@ Package pdftex.def Info: resultados/real_prev_mod4_rua3.png  used on input line
  1661.
 (pdftex.def)             Requested size: 284.52756pt x 193.45264pt.
 
-[37 <./resultados/real_prev_mod4_rua2.png>] [38 <./resultados/real_prev_mod4_ru
-a3.png>] (./relatorio.aux)
+[37 <./resultados/real_prev_mod4_rua2.png>]
+<resultados/aprend_no_inc.png, id=199, 389.455pt x 268.00125pt>
+File: resultados/aprend_no_inc.png Graphic file (type png)
+<use resultados/aprend_no_inc.png>
+Package pdftex.def Info: resultados/aprend_no_inc.png  used on input line 1713.
+
+(pdftex.def)             Requested size: 284.52756pt x 195.80284pt.
+ [38 <./resultados/real_prev_mod4_rua3.png>]
+<resultados/prev_real_no_inc.png, id=204, 373.395pt x 256.96pt>
+File: resultados/prev_real_no_inc.png Graphic file (type png)
+<use resultados/prev_real_no_inc.png>
+Package pdftex.def Info: resultados/prev_real_no_inc.png  used on input line 17
+19.
+(pdftex.def)             Requested size: 284.52756pt x 195.8131pt.
+ [39 <./resultados/aprend_no_inc.png> <./resultados/prev_real_no_inc.png>] [40]
+ (./relatorio.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6750 strings out of 494091
- 96071 string characters out of 6163523
- 276763 words of memory out of 5000000
- 10289 multiletter control sequences out of 15000+600000
+ 6761 strings out of 494091
+ 96396 string characters out of 6163523
+ 276807 words of memory out of 5000000
+ 10298 multiletter control sequences out of 15000+600000
  11871 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  42i,9n,42p,969b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -681,10 +695,10 @@ ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on relatorio.pdf (40 pages, 2292497 bytes).
+Output written on relatorio.pdf (42 pages, 2388939 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 246 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
