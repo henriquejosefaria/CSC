@@ -189,6 +189,7 @@ O \textit{dataset "Traffic Flow Braga" } é constituído pelos seguintes atribut
 \end{itemize}
 
 \subsection{Preparação dos dados}
+\label{section:falta}
 
 Após análise dos quatro \textit{datasets} concluiu-se que, antes de se desenvolver o modelo para a previsão da \textit{feature speed\_diff}, era necessário fazer uma prévia preparação dos dados.
 
@@ -397,7 +398,7 @@ for i in range(1,13):
 		pass
 \end{lstlisting}
 
-Visto que no final do capítulo \ref{label} verificámos que existiam dias em falta e como se pretende que sejam dados ao modelo, como \textit{input}, $3$ dias para prever o próximo, quer garantir-se que, de facto, esses $4$ dias são seguidos, ou seja, que os $3$ dias dados como \textit{input} mais o dia a prever sejam seguidos, evitando que ocorram situações em que o primeiro dia seja, por exemplo, $16$ de Janeiro e o dia a prever seja $30$ de Janeiro.
+Visto que no final do capítulo \ref{section:falta} verificámos que existiam dias em falta e como se pretende que sejam dados ao modelo, como \textit{input}, $3$ dias para prever o próximo, quer garantir-se que, de facto, esses $4$ dias são seguidos, ou seja, que os $3$ dias dados como \textit{input} mais o dia a prever sejam seguidos, evitando que ocorram situações em que o primeiro dia seja, por exemplo, $16$ de Janeiro e o dia a prever seja $30$ de Janeiro.
 
 Assim, para ter a certeza que se treina o modelo com dias consecutivos, percorreu-se o \textit{dataset} construindo blocos de $4$ dias, para verificar se estes $4$ dias são seguidos, calcula-se a diferença entre o último dia do bloco e o primeiro e, dependendo do mês, verifica-se se é $4$. Note-se, no entanto, que se para um dado bloco tivermos dias de meses distintos, esta diferença é negativa, sendo este problema corrigido dependendo do mês em causa.
 
@@ -480,23 +481,19 @@ history=model.fit(x_train, y_train, validation_data=(x_test, y_test_n), epochs=1
 
 Após construído o modelo, procedeu-se a um conjunto de testes, utilizando $200$ dados de teste, com o intuito de ser possível avaliar o comportamento do mesmo.
 
-Para se perceber se o comportamento do modelo era o esperado procedeu-se à utilização de duas métricas de erro.
-
-Antes disso, determinou-se, para os $200$ dados de teste, o número de ocurrências de cada dia da semana.
-
---------------------------
-Tendo esta informação, calcularam-se dois tipos de erro:
+Primeiro determinou-se, para os 200 dados de teste, o número de ocorrências de cada dia da semana.
+Para se perceber se o comportamento do modelo era o esperado procedeu-se à utilização de duas métricas de erro:
 
 \begin{enumerate}
 	\item A média dos erros, para cada dia da semana;
 	\item A diferença, absoluta, máxima entre o valor real e o valor previsto, para cada dia da semana.
 \end{enumerate}
 
-Ambas as métricas de erro parecem ser úteis para perceber o comportamento do modelo, no entanto, a segunda métrica talvez seja a que melhor representa o comportamento do mesmo. Isto porque, na sua maioria, os valores do \textit{speed\_diff} são $0$ e, portanto, nesses casos, o modelo facilmente prevê esses valores. No entanto, 
+Ambas as métricas de erro parecem ser úteis para perceber o comportamento do modelo, no entanto, a segunda métrica talvez seja a que melhor representa o comportamento do mesmo. Isto porque, na sua maioria, os valores do \textit{speed\_diff} são $0$ e, portanto, nesses casos, o modelo facilmente prevê esses valores. Assim, o que se pretende é perceber o comportamento do modelo quando o valor do \textit{speed diff} é elevado.
 
 \subsubsection{Rua 1}
 
-Começou-se por treinar o modelos com os dados da rua $1$, e fazer a previsão para essa mesma rua. 
+Começou-se por treinar o modelo com os dados da rua $1$, e fazer a previsão para essa mesma rua. 
 
 \begin{figure}[H]
 	\centering
@@ -505,7 +502,7 @@ Começou-se por treinar o modelos com os dados da rua $1$, e fazer a previsão p
 	\label{figure:curvas_aprend_1}
 \end{figure}
 
-Observando a Figura \ref{figure:curvas_aprend_1}, conclui-se que o modelo criado apresenta \textit{underfitting}, uma vez que as curvas de aprendizagem são distintas uma da outra. Pode ainda referir-se que, apesar de existir \textit{underfitting}, é provável que com o aumento do número de épocas não se observe uma convergência das curvas, uma vez que se observa que ambas as curvas parecem ter estagnado, o que evidencia que o modelo não está a aprender.
+Observando a Figura \ref{figure:curvas_aprend_1}, conclui-se que o modelo criado apresenta \textit{underfitting}, uma vez que as curvas de aprendizagem são distintas uma da outra. Pode ainda referir-se que, apesar de existir \textit{underfitting}, é provável que com o aumento do número de épocas não se observe uma convergência das curvas, uma vez que se observa que ambas as curvas parecem ter estagnado, o que pode evidenciar que o modelo não está a aprender.
 
 \begin{figure}[H]
 	\centering
@@ -514,7 +511,192 @@ Observando a Figura \ref{figure:curvas_aprend_1}, conclui-se que o modelo criado
 	\label{figure:real_prev_1}
 \end{figure}
 
-A Figura \ref{figure:real_prev_1} permite comparar, graficamente o valor teórico com o valor real, durante um período de $24$ horas. Ora, através da análise do gráfico observa-se que não existe uma grande discrepância entre o valor real e o valor previsto.
+A Figura \ref{figure:real_prev_1} permite comparar, graficamente o valor teórico com o valor real, durante um período de $24$ horas. Ora, através da análise do gráfico observa-se que não existe uma grande discrepância entre o valor real e o valor previsto. Pelo que se pode considerar que o modelo construído faz boas previsões.
+
+Para melhor perceber os valores do gráfico, analisem-se os valores concretos, previstos e reais, para dia representado no gráfico:
+
+Hora:  0 . Real:  0.0 Previsto:  0.88026047\\
+Hora:  1 . Real:  0.0 Previsto:  0.7328456\\
+Hora:  2 . Real:  6.0 Previsto:  3.3725905\\
+Hora:  3 . Real:  2.33 Previsto:  1.1033564\\
+Hora:  4 . Real:  0.0 Previsto:  0.023271516\\
+Hora:  5 . Real:  0.0 Previsto:  0.0001698993\\
+Hora:  6 . Real:  0.0 Previsto:  0.00014231614\\
+Hora:  7 . Real:  0.0 Previsto:  0.012032909\\
+Hora:  8 . Real:  0.0 Previsto:  0.000106166335\\
+Hora:  9 . Real:  0.0 Previsto:  0.00021103116\\
+Hora:  10 . Real:  0.0 Previsto:  7.701842e-05\\
+Hora:  11 . Real:  0.0 Previsto:  1.9046819e-06\\
+Hora:  12 . Real:  0.0 Previsto:  0.0008848502\\
+Hora:  13 . Real:  1.333 Previsto:  0.32069737\\
+Hora:  14 . Real:  3.333 Previsto:  2.1331909\\
+Hora:  15 . Real:  1.67 Previsto:  1.2618717\\
+Hora:  16 . Real:  2.25 Previsto:  1.9521923\\
+Hora:  17 . Real:  5.67 Previsto:  3.6571324\\
+Hora:  18 . Real:  0.0 Previsto:  0.2529186\\
+Hora:  19 . Real:  0.0 Previsto:  0.36589038\\
+Hora:  20 . Real:  1.67Previsto:  0.857706\\
+Hora:  21 . Real:  2.0 Previsto:  1.1876951\\
+Hora:  22 . Real:  3.33 Previsto:  3.1549797\\
+Hora:  23 . Real:  2.67 Previsto:  2.0546534\\
+
+Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes valores do erro, obtiveram-se os seguinte resultados:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{||c||c|c||}
+	\hline\hline
+	 & \textit{Average Diff} & \textit{Max Diff} \\
+	\hline\hline
+	29 Segundas & 
+	0.45041437349683916 & 2.688410424907837\\
+	\hline
+	32 Terças  &
+	0.667550546634858 & 3.34442551806569\\
+	\hline
+	21 Quartas & 
+	0.7256597869759804 & 3.54161070084286
+ \\
+	\hline
+	28 Quintas  & 
+	0.8709156546679246 & 3.574933966435591
+   \\
+	\hline
+	26 Sextas & 
+	0.6481754712763175 & 3.0730847400820447
+ \\
+	\hline
+	40 Sábados  & 
+	0.8333129548379334 & 3.8209066510200493   \\
+	\hline
+	24 Domingos & 0.3614912258109369 & 2.909281443294168 \\
+	\hline\hline
+\end{tabular}
+\label{table:rua1}
+\caption{Cálculo dos erros.}
+\end{table}
+
+Analizando os resultados apresentados na Tabela \ref{table:rua1}, conclui-se que a pior previsão feita erra em cerca de $3 \ km/h$, o que se pode considerar aceitável.
+
+Veja-se, agora, o comportamento do modelo treinado com dados da rua $1$, para fazer previsões para as restantes ruas.
+
+\vspace{0.5cm}
+\textbf{Usar modelo da rua 1 para fazer previsões para a rua 2}
+
+De seguida, apresenta-se, graficamente, os resultados obtidos, para o primeiro dia de teste:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/real_prev_mod1_rua2.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+\end{figure}
+
+Relativamente aos erros obtidos, foram os seguintes:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline\hline
+		& \textit{Average Diff} & \textit{Max Diff} \\
+		\hline\hline
+		29 Segundas & 
+		1.4141310389214723 & 5.4525856934502\\
+		\hline
+		32 Terças  &
+		2.4944998488697543 & 8.16405452179511\\
+		\hline
+		21 Quartas & 2.062510539569396 & 6.801310798241978	\\
+		\hline
+		28 Quintas  & 2.0869987113999438 & 6.89385905070646	\\
+		\hline
+		26 Sextas & 2.0705880075275753 & 7.1521253924084025	\\
+		\hline
+		40 Sábados  & 2.1271022976475544 &7.631666235677035  \\
+		\hline
+		24 Domingos & 1.3197363545949343 & 5.627886255043933\\
+		\hline\hline
+	\end{tabular}
+	\label{table:mod1_rua2}
+	\caption{Cálculo dos erros.}
+\end{table}
+
+Ora, analisando a Tabela \ref{table:mod1_rua2}, conclui-se que o modelo construído para a rua $1$ não deve ser utilizado para fazer previsões para a rua $2$.
+
+\vspace{0.5cm}
+\textbf{Usar modelo da rua 1 para fazer previsões para a rua 3}
+
+De seguida, apresenta-se, graficamente, os resultados obtidos, para o primeiro dia de teste:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/real_prev_mod1_rua3.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+\end{figure}
+
+Relativamente aos erros obtidos, foram os seguintes:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline\hline
+		& \textit{Average Diff} & \textit{Max Diff} \\
+		\hline\hline
+		29 Segundas & 4.968594437572376 & 21.611381565138636 \\
+		\hline
+		32 Terças  &4.512921544439047 & 20.73420555472391\\
+		\hline
+		21 Quartas & 4.851166798868657 & 18.831684388423337	\\
+		\hline
+		28 Quintas  & 4.639013167480982 &	17.884045215024216\\
+		\hline
+		26 Sextas & 4.004339738592879 & 15.851706346395257 \\
+		\hline
+		40 Sábados  & 5.0669990569940415 & 21.99666263190514 \\
+		\hline
+		24 Domingos & 3.638927058432079 & 13.069540181474318\\
+		\hline\hline
+	\end{tabular}
+	\label{table:mod1_rua3}
+	\caption{Cálculo dos erros.}
+\end{table}
+
+\vspace{0.5cm}
+\textbf{Usar modelo da rua 1 para fazer previsões para a rua 4}
+
+De seguida, apresenta-se, graficamente, os resultados obtidos, para o primeiro dia de teste:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/real_prev_mod1_rua4.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+\end{figure}
+
+Relativamente aos erros obtidos, foram os seguintes:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline\hline
+		& \textit{Average Diff} & \textit{Max Diff} \\
+		\hline\hline
+		29 Segundas & 4.041932785527517 & 15.000999822035086 \\
+		\hline
+		32 Terças  &6.127982964351863 & 22.09220023948531\\
+		\hline
+		21 Quartas & 6.060101547371708 & 20.905789931025378	\\
+		\hline
+		28 Quintas  & 6.963894699804549 & 21.725286395306515	\\
+		\hline
+		26 Sextas & 5.634002496531076 & 19.596345331894703 \\
+		\hline
+		40 Sábados  & 6.579623658131328 & 22.902688922073136 \\
+		\hline
+		24 Domingos & 3.0330747335502473 & 13.139625084538219\\
+		\hline\hline
+	\end{tabular}
+	\label{table:mod1_rua4}
+	\caption{Cálculo dos erros.}
+\end{table}
 
 
 

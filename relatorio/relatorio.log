@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  15 MAY 2020 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  15 MAY 2020 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,10 +361,10 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 <Traffic_Incidents.png, id=28, 577.15625pt x 404.51125pt>
 File: Traffic_Incidents.png Graphic file (type png)
 <use Traffic_Incidents.png>
-Package pdftex.def Info: Traffic_Incidents.png  used on input line 199.
+Package pdftex.def Info: Traffic_Incidents.png  used on input line 200.
 (pdftex.def)             Requested size: 284.52756pt x 199.42201pt.
  [4]
-Overfull \hbox (29.69664pt too wide) detected at line 205
+Overfull \hbox (29.69664pt too wide) detected at line 206
 \OML/cmm/m/it/12 dist\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A; B\OT1/cmr/m/n/12 ) = 
 \OML/cmm/m/it/12 R \OMS/cmsy/m/n/12 ^^C []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 sin
 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 lat[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^C [
@@ -382,15 +382,15 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 <EUA.png, id=39, 2328.7pt x 815.045pt>
 File: EUA.png Graphic file (type png)
 <use EUA.png>
-Package pdftex.def Info: EUA.png  used on input line 263.
+Package pdftex.def Info: EUA.png  used on input line 264.
 (pdftex.def)             Requested size: 398.33858pt x 139.41394pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 263--264
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 264--265
  [][] 
  []
 
 [6]
-Overfull \hbox (8.83679pt too wide) in paragraph at lines 271--272
+Overfull \hbox (8.83679pt too wide) in paragraph at lines 272--273
 []\OT1/cmr/m/n/12 Come^^Xcou-se por fa-zer o tra-ta-mento do \OT1/cmr/m/it/12 d
 a-ta-set We-ather[]Descriptions[]Braga\OT1/cmr/m/n/12 ,
  []
@@ -398,10 +398,10 @@ a-ta-set We-ather[]Descriptions[]Braga\OT1/cmr/m/n/12 ,
 <weather.png, id=43, 534.99875pt x 262.9825pt>
 File: weather.png Graphic file (type png)
 <use weather.png>
-Package pdftex.def Info: weather.png  used on input line 279.
+Package pdftex.def Info: weather.png  used on input line 280.
 (pdftex.def)             Requested size: 284.52756pt x 139.8656pt.
 [7 <./EUA.png>]
-Overfull \hbox (37.33687pt too wide) in paragraph at lines 283--284
+Overfull \hbox (37.33687pt too wide) in paragraph at lines 284--285
 []\OT1/cmr/m/n/12 De se-guida, procedeu-se ^^Ra pre-para^^Xc~ao do \OT1/cmr/m/i
 t/12 da-ta-set Traf-fic[]Flow[]Braga\OT1/cmr/m/n/12 , procedendo-
  []
@@ -409,23 +409,23 @@ t/12 da-ta-set Traf-fic[]Flow[]Braga\OT1/cmr/m/n/12 , procedendo-
 <join.png, id=48, 651.43375pt x 408.52625pt>
 File: join.png Graphic file (type png)
 <use join.png>
-Package pdftex.def Info: join.png  used on input line 291.
+Package pdftex.def Info: join.png  used on input line 292.
 (pdftex.def)             Requested size: 284.52756pt x 178.43681pt.
 [8 <./weather.png>]
-Overfull \hbox (29.53166pt too wide) in paragraph at lines 295--296
+Overfull \hbox (29.53166pt too wide) in paragraph at lines 296--297
 []\OT1/cmr/m/n/12 Ap^^Sos a jun^^Xc~ao dos \OT1/cmr/m/it/12 da-ta-sets\OT1/cmr/
 m/n/12 , eliminou-se a co-luna \OT1/cmr/m/it/12 cre-a-tion[]date \OT1/cmr/m/n/1
 2 e transformaram-
  []
 
 
-Overfull \hbox (33.58331pt too wide) in paragraph at lines 295--296
+Overfull \hbox (33.58331pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/12 chuva. De se-guida, alteraram-se al-guns dos va-lo-res ($"\OML/
 cmm/m/it/12 trovoada com chuva fraca\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/12 !
  []
 
 
-Overfull \hbox (11.5583pt too wide) in paragraph at lines 295--296
+Overfull \hbox (11.5583pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 chuva fraca\OT1/cmr/m/n/12 "$, $"\OML/cmm/m/i
 t/12 trovoada com chuva forte\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/
 12 "\OML/cmm/m/it/12 chuva forte\OT1/cmr/m/n/12 "$ e $"\OML/cmm/m/it/12 trovoad
@@ -435,10 +435,10 @@ a\OT1/cmr/m/n/12 " \OMS/cmsy/m/n/12 !
 <prep.png, id=53, 1334.9875pt x 150.5625pt>
 File: prep.png Graphic file (type png)
 <use prep.png>
-Package pdftex.def Info: prep.png  used on input line 299.
+Package pdftex.def Info: prep.png  used on input line 300.
 (pdftex.def)             Requested size: 426.79134pt x 48.13272pt.
 
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 299--300
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 300--301
  [][] 
  []
 
@@ -446,21 +446,21 @@ Overfull \hbox (36.79134pt too wide) in paragraph at lines 299--300
 <Incident.png, id=59, 463.7325pt x 212.795pt>
 File: Incident.png Graphic file (type png)
 <use Incident.png>
-Package pdftex.def Info: Incident.png  used on input line 311.
+Package pdftex.def Info: Incident.png  used on input line 312.
 (pdftex.def)             Requested size: 284.52756pt x 130.56454pt.
 <rank.png, id=60, 554.07pt x 641.39626pt>
 File: rank.png Graphic file (type png)
 <use rank.png>
-Package pdftex.def Info: rank.png  used on input line 319.
+Package pdftex.def Info: rank.png  used on input line 320.
 (pdftex.def)             Requested size: 284.52756pt x 329.36853pt.
  [10 <./Incident.png>]
 <tunning.png, id=65, 1282.7925pt x 349.305pt>
 File: tunning.png Graphic file (type png)
 <use tunning.png>
-Package pdftex.def Info: tunning.png  used on input line 333.
+Package pdftex.def Info: tunning.png  used on input line 334.
 (pdftex.def)             Requested size: 426.79134pt x 116.2144pt.
 
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 333--334
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 334--335
  [][] 
  []
 
@@ -468,25 +468,25 @@ Overfull \hbox (36.79134pt too wide) in paragraph at lines 333--334
 <melhores_params.png, id=71, 629.35126pt x 230.8625pt>
 File: melhores_params.png Graphic file (type png)
 <use melhores_params.png>
-Package pdftex.def Info: melhores_params.png  used on input line 341.
+Package pdftex.def Info: melhores_params.png  used on input line 342.
 (pdftex.def)             Requested size: 426.79134pt x 156.55817pt.
 
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 341--342
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 342--343
  [][] 
  []
 
 <atmos.png, id=72, 638.385pt x 260.975pt>
 File: atmos.png Graphic file (type png)
 <use atmos.png>
-Package pdftex.def Info: atmos.png  used on input line 349.
+Package pdftex.def Info: atmos.png  used on input line 350.
 (pdftex.def)             Requested size: 426.79134pt x 174.47403pt.
 
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 349--350
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 350--351
  [][] 
  []
 
 [12 <./tunning.png> <./melhores_params.png>]
-Overfull \hbox (14.84915pt too wide) in paragraph at lines 353--354
+Overfull \hbox (14.84915pt too wide) in paragraph at lines 354--355
 []\OT1/cmr/m/n/12 Ap^^Sos feita a pre-vis~ao dos \OT1/cmr/m/it/12 mis-sing va-l
 ues \OT1/cmr/m/n/12 para a \OT1/cmr/m/it/12 fe-a-ture at-mosphere\OT1/cmr/m/n/1
 2 , procedeu-
@@ -495,82 +495,124 @@ ues \OT1/cmr/m/n/12 para a \OT1/cmr/m/it/12 fe-a-ture at-mosphere\OT1/cmr/m/n/1
 <fim.png, id=78, 495.8525pt x 165.61874pt>
 File: fim.png Graphic file (type png)
 <use fim.png>
-Package pdftex.def Info: fim.png  used on input line 363.
+Package pdftex.def Info: fim.png  used on input line 364.
 (pdftex.def)             Requested size: 227.62204pt x 76.02632pt.
 [13 <./atmos.png>]
 <mes_dias.png, id=83, 560.0925pt x 301.125pt>
 File: mes_dias.png Graphic file (type png)
 <use mes_dias.png>
-Package pdftex.def Info: mes_dias.png  used on input line 371.
+Package pdftex.def Info: mes_dias.png  used on input line 372.
 (pdftex.def)             Requested size: 227.62204pt x 122.37767pt.
- [14 <./fim.png> <./mes_dias.png>]
+ [14 <./fim.png> <./mes_dias.png>] [15] [16]
+Overfull \hbox (9.52641pt too wide) in paragraph at lines 484--486
+[]\OT1/cmr/m/n/12 Primeiro determinou-se, para os 200 da-dos de teste, o n^^Sum
+ero de ocorr^encias
+ []
 
-LaTeX Warning: Reference `label' on page 15 undefined on input line 400.
-
-[15] [16]
-<resultados/curvas_aprend_1.png, id=95, 487.8225pt x 334.24875pt>
+[17]
+<resultados/curvas_aprend_1.png, id=99, 487.8225pt x 334.24875pt>
 File: resultados/curvas_aprend_1.png Graphic file (type png)
 <use resultados/curvas_aprend_1.png>
-Package pdftex.def Info: resultados/curvas_aprend_1.png  used on input line 495
+Package pdftex.def Info: resultados/curvas_aprend_1.png  used on input line 500
 .
 (pdftex.def)             Requested size: 284.52756pt x 194.95584pt.
- [17]
-<resultados/real_prev_1.png, id=100, 465.74pt x 321.2pt>
+<resultados/real_prev_1.png, id=100, 371.3875pt x 255.95625pt>
 File: resultados/real_prev_1.png Graphic file (type png)
 <use resultados/real_prev_1.png>
-Package pdftex.def Info: resultados/real_prev_1.png  used on input line 504.
-(pdftex.def)             Requested size: 284.52756pt x 196.23068pt.
- [18 <./resultados/curvas_aprend_1.png> <./resultados/real_prev_1.png>]
-<resultados/curvas_aprend_2.png, id=106, 485.815pt x 339.2675pt>
+Package pdftex.def Info: resultados/real_prev_1.png  used on input line 509.
+(pdftex.def)             Requested size: 284.52756pt x 196.0988pt.
+ [18 <./resultados/curvas_aprend_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 518--566
+
+ []
+
+[19 <./resultados/real_prev_1.png>]
+
+Package caption Warning: \label without proper reference on input line 607.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:rua1' on page 20 undefined on input line 611.
+
+<resultados/real_prev_mod1_rua2.png, id=109, 379.4175pt x 256.96pt>
+File: resultados/real_prev_mod1_rua2.png Graphic file (type png)
+<use resultados/real_prev_mod1_rua2.png>
+Package pdftex.def Info: resultados/real_prev_mod1_rua2.png  used on input line
+ 622.
+(pdftex.def)             Requested size: 284.52756pt x 192.6999pt.
+[20]
+
+Package caption Warning: \label without proper reference on input line 663.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:mod1_rua2' on page 21 undefined on input line 6
+67.
+
+<resultados/real_prev_mod1_rua3.png, id=113, 379.4175pt x 258.9675pt>
+File: resultados/real_prev_mod1_rua3.png Graphic file (type png)
+<use resultados/real_prev_mod1_rua3.png>
+Package pdftex.def Info: resultados/real_prev_mod1_rua3.png  used on input line
+ 676.
+(pdftex.def)             Requested size: 284.52756pt x 194.20537pt.
+[21 <./resultados/real_prev_mod1_rua2.png>]
+<resultados/real_prev_mod1_rua4.png, id=118, 379.4175pt x 258.9675pt>
+File: resultados/real_prev_mod1_rua4.png Graphic file (type png)
+<use resultados/real_prev_mod1_rua4.png>
+Package pdftex.def Info: resultados/real_prev_mod1_rua4.png  used on input line
+ 727.
+(pdftex.def)             Requested size: 284.52756pt x 194.20537pt.
+ [22 <./resultados/real_prev_mod1_rua3.png>]
+<resultados/curvas_aprend_2.png, id=123, 485.815pt x 339.2675pt>
 File: resultados/curvas_aprend_2.png Graphic file (type png)
 <use resultados/curvas_aprend_2.png>
-Package pdftex.def Info: resultados/curvas_aprend_2.png  used on input line 519
+Package pdftex.def Info: resultados/curvas_aprend_2.png  used on input line 777
 .
 (pdftex.def)             Requested size: 284.52756pt x 198.69588pt.
-<resultados/real_prev_2.png, id=107, 476.78125pt x 323.2075pt>
+ [23 <./resultados/real_prev_mod1_rua4.png>]
+<resultados/real_prev_2.png, id=129, 476.78125pt x 323.2075pt>
 File: resultados/real_prev_2.png Graphic file (type png)
 <use resultados/real_prev_2.png>
-Package pdftex.def Info: resultados/real_prev_2.png  used on input line 525.
+Package pdftex.def Info: resultados/real_prev_2.png  used on input line 783.
 (pdftex.def)             Requested size: 284.52756pt x 192.89032pt.
-<resultados/curvas_aprend_3.png, id=108, 485.815pt x 339.2675pt>
+<resultados/curvas_aprend_3.png, id=130, 485.815pt x 339.2675pt>
 File: resultados/curvas_aprend_3.png Graphic file (type png)
 <use resultados/curvas_aprend_3.png>
-Package pdftex.def Info: resultados/curvas_aprend_3.png  used on input line 535
+Package pdftex.def Info: resultados/curvas_aprend_3.png  used on input line 793
 .
 (pdftex.def)             Requested size: 284.52756pt x 198.69588pt.
- [19 <./resultados/curvas_aprend_2.png> <./resultados/real_prev_2.png>]
-<resultados/real_prev_3.png, id=114, 472.76625pt x 321.2pt>
+ [24 <./resultados/curvas_aprend_2.png> <./resultados/real_prev_2.png>]
+<resultados/real_prev_3.png, id=136, 472.76625pt x 321.2pt>
 File: resultados/real_prev_3.png Graphic file (type png)
 <use resultados/real_prev_3.png>
-Package pdftex.def Info: resultados/real_prev_3.png  used on input line 541.
+Package pdftex.def Info: resultados/real_prev_3.png  used on input line 799.
 (pdftex.def)             Requested size: 284.52756pt x 193.31451pt.
-<resultados/curvas_aprend_4.png, id=115, 484.81125pt x 337.26pt>
+<resultados/curvas_aprend_4.png, id=137, 484.81125pt x 337.26pt>
 File: resultados/curvas_aprend_4.png Graphic file (type png)
 <use resultados/curvas_aprend_4.png>
-Package pdftex.def Info: resultados/curvas_aprend_4.png  used on input line 550
+Package pdftex.def Info: resultados/curvas_aprend_4.png  used on input line 808
 .
 (pdftex.def)             Requested size: 284.52756pt x 197.94214pt.
-
-[20 <./resultados/curvas_aprend_3.png> <./resultados/real_prev_3.png>]
-<resultados/real_prev_4.png, id=121, 472.76625pt x 321.2pt>
+ [25 <./resultados/curvas_aprend_3.png> <./resultados/real_prev_3.png>]
+<resultados/real_prev_4.png, id=143, 472.76625pt x 321.2pt>
 File: resultados/real_prev_4.png Graphic file (type png)
 <use resultados/real_prev_4.png>
-Package pdftex.def Info: resultados/real_prev_4.png  used on input line 556.
+Package pdftex.def Info: resultados/real_prev_4.png  used on input line 814.
 (pdftex.def)             Requested size: 284.52756pt x 193.31451pt.
- [21 <./resultados/curvas_aprend_4.png> <./resultados/real_prev_4.png>] (./rela
+ [26 <./resultados/curvas_aprend_4.png> <./resultados/real_prev_4.png>] (./rela
 torio.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6677 strings out of 494091
- 93827 string characters out of 6163523
- 276026 words of memory out of 5000000
- 10227 multiletter control sequences out of 15000+600000
+ 6698 strings out of 494091
+ 94458 string characters out of 6163523
+ 276215 words of memory out of 5000000
+ 10245 multiletter control sequences out of 15000+600000
  11871 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 42i,6n,42p,969b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,9n,42p,969b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbxti10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfont
@@ -581,10 +623,10 @@ ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on relatorio.pdf (23 pages, 1918055 bytes).
+Output written on relatorio.pdf (28 pages, 2017968 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 179 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
