@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  15 MAY 2020 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  15 MAY 2020 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -521,95 +521,153 @@ File: resultados/real_prev_1.png Graphic file (type png)
 <use resultados/real_prev_1.png>
 Package pdftex.def Info: resultados/real_prev_1.png  used on input line 509.
 (pdftex.def)             Requested size: 284.52756pt x 196.0988pt.
- [18 <./resultados/curvas_aprend_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 518--566
+ [18 <./resultados/curvas_aprend_1.png>] [19 <./resultados/real_prev_1.png>]
 
- []
-
-[19 <./resultados/real_prev_1.png>]
-
-Package caption Warning: \label without proper reference on input line 607.
+Package caption Warning: \label without proper reference on input line 648.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:rua1' on page 20 undefined on input line 611.
+LaTeX Warning: Reference `table:rua1' on page 20 undefined on input line 652.
 
-<resultados/real_prev_mod1_rua2.png, id=109, 379.4175pt x 256.96pt>
+[20]
+<resultados/real_prev_mod1_rua2.png, id=112, 379.4175pt x 256.96pt>
 File: resultados/real_prev_mod1_rua2.png Graphic file (type png)
 <use resultados/real_prev_mod1_rua2.png>
 Package pdftex.def Info: resultados/real_prev_mod1_rua2.png  used on input line
- 622.
+ 663.
 (pdftex.def)             Requested size: 284.52756pt x 192.6999pt.
-[20]
 
-Package caption Warning: \label without proper reference on input line 663.
+
+Package caption Warning: \label without proper reference on input line 704.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:mod1_rua2' on page 21 undefined on input line 6
-67.
+LaTeX Warning: Reference `table:mod1_rua2' on page 21 undefined on input line 7
+08.
 
-<resultados/real_prev_mod1_rua3.png, id=113, 379.4175pt x 258.9675pt>
+[21 <./resultados/real_prev_mod1_rua2.png>]
+<resultados/real_prev_mod1_rua3.png, id=117, 379.4175pt x 258.9675pt>
 File: resultados/real_prev_mod1_rua3.png Graphic file (type png)
 <use resultados/real_prev_mod1_rua3.png>
 Package pdftex.def Info: resultados/real_prev_mod1_rua3.png  used on input line
- 676.
+ 717.
 (pdftex.def)             Requested size: 284.52756pt x 194.20537pt.
-[21 <./resultados/real_prev_mod1_rua2.png>]
 <resultados/real_prev_mod1_rua4.png, id=118, 379.4175pt x 258.9675pt>
 File: resultados/real_prev_mod1_rua4.png Graphic file (type png)
 <use resultados/real_prev_mod1_rua4.png>
 Package pdftex.def Info: resultados/real_prev_mod1_rua4.png  used on input line
- 727.
+ 768.
 (pdftex.def)             Requested size: 284.52756pt x 194.20537pt.
  [22 <./resultados/real_prev_mod1_rua3.png>]
 <resultados/curvas_aprend_2.png, id=123, 485.815pt x 339.2675pt>
 File: resultados/curvas_aprend_2.png Graphic file (type png)
 <use resultados/curvas_aprend_2.png>
-Package pdftex.def Info: resultados/curvas_aprend_2.png  used on input line 777
+Package pdftex.def Info: resultados/curvas_aprend_2.png  used on input line 816
 .
 (pdftex.def)             Requested size: 284.52756pt x 198.69588pt.
  [23 <./resultados/real_prev_mod1_rua4.png>]
-<resultados/real_prev_2.png, id=129, 476.78125pt x 323.2075pt>
+<resultados/real_prev_2.png, id=129, 381.425pt x 259.97125pt>
 File: resultados/real_prev_2.png Graphic file (type png)
 <use resultados/real_prev_2.png>
-Package pdftex.def Info: resultados/real_prev_2.png  used on input line 783.
-(pdftex.def)             Requested size: 284.52756pt x 192.89032pt.
-<resultados/curvas_aprend_3.png, id=130, 485.815pt x 339.2675pt>
+Package pdftex.def Info: resultados/real_prev_2.png  used on input line 822.
+(pdftex.def)             Requested size: 284.52756pt x 193.93468pt.
+ [24 <./resultados/curvas_aprend_2.png> <./resultados/real_prev_2.png>] [25]
+<resultados/real_prev_mod2_rua1.png, id=138, 373.395pt x 255.95625pt>
+File: resultados/real_prev_mod2_rua1.png Graphic file (type png)
+<use resultados/real_prev_mod2_rua1.png>
+Package pdftex.def Info: resultados/real_prev_mod2_rua1.png  used on input line
+ 964.
+(pdftex.def)             Requested size: 284.52756pt x 195.0482pt.
+<resultados/real_prev_mod2_rua3.png, id=139, 383.4325pt x 257.96375pt>
+File: resultados/real_prev_mod2_rua3.png Graphic file (type png)
+<use resultados/real_prev_mod2_rua3.png>
+Package pdftex.def Info: resultados/real_prev_mod2_rua3.png  used on input line
+ 1013.
+(pdftex.def)             Requested size: 284.52756pt x 191.43336pt.
+ [26 <./resultados/real_prev_mod2_rua1.png>]
+<resultados/real_prev_mod2_rua4.png, id=144, 380.42125pt x 260.975pt>
+File: resultados/real_prev_mod2_rua4.png Graphic file (type png)
+<use resultados/real_prev_mod2_rua4.png>
+Package pdftex.def Info: resultados/real_prev_mod2_rua4.png  used on input line
+ 1061.
+(pdftex.def)             Requested size: 284.52756pt x 195.19716pt.
+ [27 <./resultados/real_prev_mod2_rua3.png>]
+<resultados/curvas_aprend_3.png, id=149, 485.815pt x 339.2675pt>
 File: resultados/curvas_aprend_3.png Graphic file (type png)
 <use resultados/curvas_aprend_3.png>
-Package pdftex.def Info: resultados/curvas_aprend_3.png  used on input line 793
-.
+Package pdftex.def Info: resultados/curvas_aprend_3.png  used on input line 110
+6.
 (pdftex.def)             Requested size: 284.52756pt x 198.69588pt.
- [24 <./resultados/curvas_aprend_2.png> <./resultados/real_prev_2.png>]
-<resultados/real_prev_3.png, id=136, 472.76625pt x 321.2pt>
+ [28 <./resultados/real_prev_mod2_rua4.png>]
+<resultados/real_prev_3.png, id=154, 378.41376pt x 257.96375pt>
 File: resultados/real_prev_3.png Graphic file (type png)
 <use resultados/real_prev_3.png>
-Package pdftex.def Info: resultados/real_prev_3.png  used on input line 799.
-(pdftex.def)             Requested size: 284.52756pt x 193.31451pt.
-<resultados/curvas_aprend_4.png, id=137, 484.81125pt x 337.26pt>
+Package pdftex.def Info: resultados/real_prev_3.png  used on input line 1112.
+(pdftex.def)             Requested size: 284.52756pt x 193.96434pt.
+ [29 <./resultados/curvas_aprend_3.png> <./resultados/real_prev_3.png>] [30]
+<resultados/real_prev_mod3_rua1.png, id=164, 380.42125pt x 258.9675pt>
+File: resultados/real_prev_mod3_rua1.png Graphic file (type png)
+<use resultados/real_prev_mod3_rua1.png>
+Package pdftex.def Info: resultados/real_prev_mod3_rua1.png  used on input line
+ 1257.
+(pdftex.def)             Requested size: 284.52756pt x 193.69562pt.
+<resultados/real_prev_mod3_rua2.png, id=165, 382.42876pt x 258.9675pt>
+File: resultados/real_prev_mod3_rua2.png Graphic file (type png)
+<use resultados/real_prev_mod3_rua2.png>
+Package pdftex.def Info: resultados/real_prev_mod3_rua2.png  used on input line
+ 1308.
+(pdftex.def)             Requested size: 284.52756pt x 192.68008pt.
+ [31 <./resultados/real_prev_mod3_rua1.png>]
+File: resultados/real_prev_mod1_rua4.png Graphic file (type png)
+<use resultados/real_prev_mod1_rua4.png>
+Package pdftex.def Info: resultados/real_prev_mod1_rua4.png  used on input line
+ 1359.
+(pdftex.def)             Requested size: 284.52756pt x 194.20537pt.
+ [32 <./resultados/real_prev_mod3_rua2.png>]
+<resultados/curvas_aprend_4.png, id=174, 484.81125pt x 337.26pt>
 File: resultados/curvas_aprend_4.png Graphic file (type png)
 <use resultados/curvas_aprend_4.png>
-Package pdftex.def Info: resultados/curvas_aprend_4.png  used on input line 808
-.
+Package pdftex.def Info: resultados/curvas_aprend_4.png  used on input line 140
+7.
 (pdftex.def)             Requested size: 284.52756pt x 197.94214pt.
- [25 <./resultados/curvas_aprend_3.png> <./resultados/real_prev_3.png>]
-<resultados/real_prev_4.png, id=143, 472.76625pt x 321.2pt>
+ [33]
+<resultados/real_prev_4.png, id=178, 379.4175pt x 257.96375pt>
 File: resultados/real_prev_4.png Graphic file (type png)
 <use resultados/real_prev_4.png>
-Package pdftex.def Info: resultados/real_prev_4.png  used on input line 814.
-(pdftex.def)             Requested size: 284.52756pt x 193.31451pt.
- [26 <./resultados/curvas_aprend_4.png> <./resultados/real_prev_4.png>] (./rela
-torio.aux)
+Package pdftex.def Info: resultados/real_prev_4.png  used on input line 1413.
+(pdftex.def)             Requested size: 284.52756pt x 193.45264pt.
+ [34 <./resultados/curvas_aprend_4.png> <./resultados/real_prev_4.png>] [35]
+<resultados/real_prev_mod4_rua1.png, id=188, 382.42876pt x 255.95625pt>
+File: resultados/real_prev_mod4_rua1.png Graphic file (type png)
+<use resultados/real_prev_mod4_rua1.png>
+Package pdftex.def Info: resultados/real_prev_mod4_rua1.png  used on input line
+ 1558.
+(pdftex.def)             Requested size: 284.52756pt x 190.43962pt.
+<resultados/real_prev_mod4_rua2.png, id=189, 380.42125pt x 258.9675pt>
+File: resultados/real_prev_mod4_rua2.png Graphic file (type png)
+<use resultados/real_prev_mod4_rua2.png>
+Package pdftex.def Info: resultados/real_prev_mod4_rua2.png  used on input line
+ 1610.
+(pdftex.def)             Requested size: 284.52756pt x 193.69562pt.
+ [36 <./resultados/real_prev_mod4_rua1.png>]
+<resultados/real_prev_mod4_rua3.png, id=194, 379.4175pt x 257.96375pt>
+File: resultados/real_prev_mod4_rua3.png Graphic file (type png)
+<use resultados/real_prev_mod4_rua3.png>
+Package pdftex.def Info: resultados/real_prev_mod4_rua3.png  used on input line
+ 1661.
+(pdftex.def)             Requested size: 284.52756pt x 193.45264pt.
+
+[37 <./resultados/real_prev_mod4_rua2.png>] [38 <./resultados/real_prev_mod4_ru
+a3.png>] (./relatorio.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6698 strings out of 494091
- 94458 string characters out of 6163523
- 276215 words of memory out of 5000000
- 10245 multiletter control sequences out of 15000+600000
+ 6750 strings out of 494091
+ 96071 string characters out of 6163523
+ 276763 words of memory out of 5000000
+ 10289 multiletter control sequences out of 15000+600000
  11871 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  42i,9n,42p,969b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -623,10 +681,10 @@ ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on relatorio.pdf (28 pages, 2017968 bytes).
+Output written on relatorio.pdf (40 pages, 2292497 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 236 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
