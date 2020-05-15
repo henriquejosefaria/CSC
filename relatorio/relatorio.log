@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  14 MAY 2020 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  15 MAY 2020 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -507,16 +507,67 @@ Package pdftex.def Info: mes_dias.png  used on input line 371.
 
 LaTeX Warning: Reference `label' on page 15 undefined on input line 400.
 
-[15] [16] (./relatorio.aux)
+[15] [16]
+<resultados/curvas_aprend_1.png, id=95, 487.8225pt x 334.24875pt>
+File: resultados/curvas_aprend_1.png Graphic file (type png)
+<use resultados/curvas_aprend_1.png>
+Package pdftex.def Info: resultados/curvas_aprend_1.png  used on input line 495
+.
+(pdftex.def)             Requested size: 284.52756pt x 194.95584pt.
+ [17]
+<resultados/real_prev_1.png, id=100, 465.74pt x 321.2pt>
+File: resultados/real_prev_1.png Graphic file (type png)
+<use resultados/real_prev_1.png>
+Package pdftex.def Info: resultados/real_prev_1.png  used on input line 504.
+(pdftex.def)             Requested size: 284.52756pt x 196.23068pt.
+ [18 <./resultados/curvas_aprend_1.png> <./resultados/real_prev_1.png>]
+<resultados/curvas_aprend_2.png, id=106, 485.815pt x 339.2675pt>
+File: resultados/curvas_aprend_2.png Graphic file (type png)
+<use resultados/curvas_aprend_2.png>
+Package pdftex.def Info: resultados/curvas_aprend_2.png  used on input line 519
+.
+(pdftex.def)             Requested size: 284.52756pt x 198.69588pt.
+<resultados/real_prev_2.png, id=107, 476.78125pt x 323.2075pt>
+File: resultados/real_prev_2.png Graphic file (type png)
+<use resultados/real_prev_2.png>
+Package pdftex.def Info: resultados/real_prev_2.png  used on input line 525.
+(pdftex.def)             Requested size: 284.52756pt x 192.89032pt.
+<resultados/curvas_aprend_3.png, id=108, 485.815pt x 339.2675pt>
+File: resultados/curvas_aprend_3.png Graphic file (type png)
+<use resultados/curvas_aprend_3.png>
+Package pdftex.def Info: resultados/curvas_aprend_3.png  used on input line 535
+.
+(pdftex.def)             Requested size: 284.52756pt x 198.69588pt.
+ [19 <./resultados/curvas_aprend_2.png> <./resultados/real_prev_2.png>]
+<resultados/real_prev_3.png, id=114, 472.76625pt x 321.2pt>
+File: resultados/real_prev_3.png Graphic file (type png)
+<use resultados/real_prev_3.png>
+Package pdftex.def Info: resultados/real_prev_3.png  used on input line 541.
+(pdftex.def)             Requested size: 284.52756pt x 193.31451pt.
+<resultados/curvas_aprend_4.png, id=115, 484.81125pt x 337.26pt>
+File: resultados/curvas_aprend_4.png Graphic file (type png)
+<use resultados/curvas_aprend_4.png>
+Package pdftex.def Info: resultados/curvas_aprend_4.png  used on input line 550
+.
+(pdftex.def)             Requested size: 284.52756pt x 197.94214pt.
+
+[20 <./resultados/curvas_aprend_3.png> <./resultados/real_prev_3.png>]
+<resultados/real_prev_4.png, id=121, 472.76625pt x 321.2pt>
+File: resultados/real_prev_4.png Graphic file (type png)
+<use resultados/real_prev_4.png>
+Package pdftex.def Info: resultados/real_prev_4.png  used on input line 556.
+(pdftex.def)             Requested size: 284.52756pt x 193.31451pt.
+ [21 <./resultados/curvas_aprend_4.png> <./resultados/real_prev_4.png>] (./rela
+torio.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6600 strings out of 494091
- 92160 string characters out of 6163523
- 276006 words of memory out of 5000000
- 10159 multiletter control sequences out of 15000+600000
+ 6677 strings out of 494091
+ 93827 string characters out of 6163523
+ 276026 words of memory out of 5000000
+ 10227 multiletter control sequences out of 15000+600000
  11871 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  42i,6n,42p,969b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -530,10 +581,10 @@ ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on relatorio.pdf (18 pages, 1721848 bytes).
+Output written on relatorio.pdf (23 pages, 1918055 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 157 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

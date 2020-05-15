@@ -431,8 +431,140 @@ Sabendo-se que cada \textit{input} é constituído por $3$ dias seguidos, com as
 
 Após feito todo o tratamento acima mencionado, o \textit{dataset} está pronto para ser aplicado a uma rede que permita prever a \textit{feature speed\_diff}.
 
-------------------------------------------------------
+\section{Modelo}
 
-Para fazer a previsão da \textit{feature speed\_diff} fez-se então 
+O problema que se pretende resolver é um problema de séries temporais, como já foi anteriormente referido. Deste modo, para prever a \textit{feature speed\_diff} optou-se por construir um modelo \textit{multistep} e \textit{multivariate} que utiliza \textit{LSTM}'s.
+
+Tendo em conta que o objetivo é utilizar $3$ dias para prever as $24$ horas seguintes, utilizando $11$ \textit{features}, definiu-se como $input_shape = (24*3,11)$.
+
+Antes de se começar a treinar o modelo procedeu-se à normalização dos dados:
+
+\begin{lstlisting}[language=Python]
+# Features normalization
+scalers=[]
+for i in range(11):
+sc = MinMaxScaler(feature_range=(0,1))
+x_train[:,i] = sc.fit_transform(x_train[:,i])
+x_test[:,i] = sc.fit_transform(x_test[:,i])
+scalers.append(sc)
+
+# Labels normalization
+sc1 = MinMaxScaler(feature_range=(0,1))
+y_train = sc1.fit_transform(y_train)
+y_test_n = sc1.fit_transform(y_test)
+\end{lstlisting}
+
+Uma vez que os dados estavam normalizados no intervalo $[0,1]$ recorreu-se à função de ativação \textit{sigmoid}.
+
+Relativamente às métricas utilizadas, utilizou-se como \textit{loss} o \textit{mean square error} e como métrica o \textit{root mean square error}. Estas foram as métricas escolhidas, uma vez que o  objetivo era penalizar erros grandes, e estas são as melhores métricas para o fazer.
+
+Assim, recorrendo a técnicas de intuição e experimentação construiu-se o seguinte modelo:
+
+\begin{lstlisting}[language=Python]
+model = Sequential()
+model.add(CuDNNLSTM(units=24*3, return_sequences=True, input_shape = (24*3,11) ) )
+model.add(Dropout(0.2))
+model.add(CuDNNLSTM(24*3 , return_sequences=True))
+model.add(Dropout(0.2))
+model.add(CuDNNLSTM(24*3, return_sequences=True))
+model.add(Dropout(0.2))
+model.add(CuDNNLSTM(24*2))
+model.add(Dropout(0.2))
+model.add(Dense(24,activation='sigmoid'))
+model.compile(optimizer='adam', loss='mean_squared_error',metrics=rmse)
+callback = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=20)
+history=model.fit(x_train, y_train, validation_data=(x_test, y_test_n), epochs=1000, callbacks=[callback])
+\end{lstlisting}
+
+\subsection{Avaliação do comportamento do modelo}
+
+Após construído o modelo, procedeu-se a um conjunto de testes, utilizando $200$ dados de teste, com o intuito de ser possível avaliar o comportamento do mesmo.
+
+Para se perceber se o comportamento do modelo era o esperado procedeu-se à utilização de duas métricas de erro.
+
+Antes disso, determinou-se, para os $200$ dados de teste, o número de ocurrências de cada dia da semana.
+
+--------------------------
+Tendo esta informação, calcularam-se dois tipos de erro:
+
+\begin{enumerate}
+	\item A média dos erros, para cada dia da semana;
+	\item A diferença, absoluta, máxima entre o valor real e o valor previsto, para cada dia da semana.
+\end{enumerate}
+
+Ambas as métricas de erro parecem ser úteis para perceber o comportamento do modelo, no entanto, a segunda métrica talvez seja a que melhor representa o comportamento do mesmo. Isto porque, na sua maioria, os valores do \textit{speed\_diff} são $0$ e, portanto, nesses casos, o modelo facilmente prevê esses valores. No entanto, 
+
+\subsubsection{Rua 1}
+
+Começou-se por treinar o modelos com os dados da rua $1$, e fazer a previsão para essa mesma rua. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/curvas_aprend_1.png}
+	\caption{Curvas de aprendizagem.}
+	\label{figure:curvas_aprend_1}
+\end{figure}
+
+Observando a Figura \ref{figure:curvas_aprend_1}, conclui-se que o modelo criado apresenta \textit{underfitting}, uma vez que as curvas de aprendizagem são distintas uma da outra. Pode ainda referir-se que, apesar de existir \textit{underfitting}, é provável que com o aumento do número de épocas não se observe uma convergência das curvas, uma vez que se observa que ambas as curvas parecem ter estagnado, o que evidencia que o modelo não está a aprender.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/real_prev_1.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+	\label{figure:real_prev_1}
+\end{figure}
+
+A Figura \ref{figure:real_prev_1} permite comparar, graficamente o valor teórico com o valor real, durante um período de $24$ horas. Ora, através da análise do gráfico observa-se que não existe uma grande discrepância entre o valor real e o valor previsto.
+
+
+
+\subsubsection{Rua 2}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/curvas_aprend_2.png}
+	\caption{Curvas de aprendizagem.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/real_prev_2.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+\end{figure}
+
+\subsubsection{Rua 3}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/curvas_aprend_3.png}
+	\caption{Curvas de aprendizagem.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/real_prev_3.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+\end{figure}
+
+\subsubsection{Rua 4}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/curvas_aprend_4.png}
+	\caption{Curvas de aprendizagem.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{resultados/real_prev_4.png}
+	\caption{Valores reais vs previstos, em 24 horas.}
+\end{figure}
+
+
 
 \end{document}
