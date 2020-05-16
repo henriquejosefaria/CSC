@@ -11,8 +11,10 @@
 \contentsline {section}{\numberline {4}Modelo}{16}
 \contentsline {subsection}{\numberline {4.1}Avalia\IeC {\c c}\IeC {\~a}o do comportamento do modelo}{17}
 \contentsline {subsubsection}{\numberline {4.1.1}Rua 1}{18}
-\contentsline {subsubsection}{\numberline {4.1.2}Rua 2}{24}
-\contentsline {subsubsection}{\numberline {4.1.3}Rua 3}{29}
-\contentsline {subsubsection}{\numberline {4.1.4}Rua 4}{34}
-\contentsline {subsubsection}{\numberline {4.1.5}Conclus\IeC {\~o}es}{38}
-\contentsline {subsection}{\numberline {4.2}\textit {Dataset} sem incidentes}{39}
+\contentsline {subsubsection}{\numberline {4.1.2}Rua 2}{21}
+\contentsline {subsubsection}{\numberline {4.1.3}Rua 3}{24}
+\contentsline {subsubsection}{\numberline {4.1.4}Rua 4}{27}
+\contentsline {section}{\numberline {5}Extra}{30}
+\contentsline {subsection}{\numberline {5.1}\textit {Dataset} sem incidentes}{30}
+\contentsline {subsection}{\numberline {5.2}Usar modelo da rua 2 para fazer previs\IeC {\~o}es para a rua 1}{33}
+\contentsline {subsection}{\numberline {5.3}Usar modelo da rua 1 para fazer previs\IeC {\~o}es para a rua 3}{34}
