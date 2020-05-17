@@ -1293,11 +1293,11 @@ Verificando os resultados, observam-se erros muito elevados. Isto deve-se ao fac
 Apresentaram-se, nos últimos capítulos alguns dos testes efetuados, e respetiva análise crítica. No entanto, existem muitos mais testes interessantes que poderiam ter sido realizados, nomeadamente:
 
 \begin{enumerate}
-	\item Criar um modelo que fosse treinado com as ruas $1$ e $2$, simultaneamente, e verificar o seu comportamento na previsão da variável \textit{speed\_diff} das ruas $1$ e $2$, separadamente;
-	\item Fazer o mesmo estudo mencionado em $(1)$, mas para as ruas $3$ e $4$;
+	\item Criar um modelo que fosse treinado com as ruas $1$ e $2$, uma vez que estas têm um fluxo de trânsito semelhante, simultaneamente, e verificar o seu comportamento na previsão da variável \textit{speed\_diff} das ruas $1$ e $2$, separadamente;
+	\item Fazer o mesmo estudo mencionado em $(1)$, mas para as ruas $3$ e $4$, sugere-se usar estas ruas em simultâneo, uma vez que ambas apresentam um elevado fluxo de trânsito;
 	\item Treinar o modelo com todas as ruas e avaliar o seu desempenho;
-	\item Considerar o melhor modelo criado e testá-lo para o \textit{dataset} do Porto;
-	\item Dado o facto da rua $3$ ser uma rua cujo o trânsito depende muito do facto de ser, ou não, período letivo, e, portanto, apresentar muito menos trânsito durante os meses Junho, Julho e Agosto, talvez fosse interessante fazer o treino do modelo para esta rua, sem os meses mencionados, e avaliar o desempenho do modelo.
+	\item Considerar o modelo treinado para a rua $4$, uma vez que esta rua apresenta muito trânsito, e testá-lo para o \textit{dataset} do Porto, uma cidade conhecida pelo seu elevado fluxo de trânsito;
+	\item Dado o facto da rua $3$ ser uma rua cujo o trânsito depende muito do facto de ser, ou não, período letivo, e, portanto, apresentar muito menos trânsito durante os meses Junho, Julho e Agosto, talvez fosse interessante criar dois modelos: um modelo treinado sem os meses mencionados e outro considerando esses mesmo meses.
 \end{enumerate}
 
 
