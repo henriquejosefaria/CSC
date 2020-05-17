@@ -104,6 +104,15 @@
 
 \section{Introdução}
 
+A segurança rodoviária tem-se tornado num crescente ponto de preocupação da nossa sociedade. Uma primeira, e simples, explicação surge do número substancial de acidentes e mortes que se verificam nas estradas, dia após dia. Uma outra explicação poderá fundamentar-se na poluição atmosférica ou no grau de saturação que se verifica em determinadas zonas e ruas de várias cidades.
+
+Uma das abordagens seguidas para combater estes problemas prende-se com a previsão do fluxo de tráfego rodoviário. Essa informação poderá depois ser utilizada para informar e auxiliar autoridades, condutores, pedestres e ciclistas. Numa fase inicial, a modelação do fluxo de tráfego rodoviário era efetuada recorrendo a modelos essencialmente estatísticos. Contudo, tem-se verificado uma crescente adoção de modelos de \textit{Deep Learning}, em particular Redes Neuronais Recorrentes, para previsão do fluxo de tráfego, a curto e longo prazo, com resultados muito interessantes.
+
+Assim, no contexto da componente prática de avaliação, da unidade curricular Classificadores e Sistemas Conexionistas, pretende-se conceber otimizar modelos de \textit{Deep Learning}, em particular Redes Neuronais Recorrentes, para previsão do fluxo de tráfego, a curto e/ou longo prazo. 
+
+De modo a satisfazer os objetivos propostos, o presente trabalho começa por apresentar o modo como se procedeu ao tratamento de dados dos diversos \textit{datasets} disponibilizados. De seguida, apresenta-se o problema que se pretende resolver.
+
+Por fim, são apresentados os vários resultados obtidos para o modelo criado, e respetiva análise crítica.
 
 \newpage
 
@@ -121,72 +130,6 @@ Os dados encontram-se distribuídos em $4$ \textit{datasets}:
 \end{itemize}
 
 Todos os \textit{datasets} contêm dados relativos ao período entre $15$ Janeiro $2019$ e $31$ Dezembro $2019$.
-
-\subsection{\textit{Traffic Flow Braga}}
-
-O \textit{dataset "Traffic Flow Braga" } é constituído pelos seguintes atributos:
-
-\begin{itemize}
-	\item $city\_name$;
-	\item $road\_num$;
-	\item $road\_name$;
-	\item $functional\_road\_class\_desc$;
-	\item $current\_speed$;
-	\item $free\_flow\_speed$;
-	\item $speed\_diff$;
-	\item $current\_travel\_time$;
-	\item $free_flow\_travel\_time$;
-	\item $time\_diff$;
-	\item $creation\_date$.
-\end{itemize}
-
-\subsection{\textit{Traffic Incidents Braga}}
-
-\begin{itemize}
-	\item $city\_name$;
-	\item $description$;
-	\item $cause\_of\_incident$;
-	\item $from\_road$;
-	\item $to\_road$;
-	\item $affected\_roads$;
-	\item $incident\_category\_desc$;
-	\item $magnitude\_of\_delay\_desc$;
-	\item $length\_in\_meters$;
-	\item $delay\_in\_seconds$;
-	\item $incident\_date$;
-	\item $latitude$;
-	\item $longitude$.
-\end{itemize}
-
-\subsection{\textit{Weather Braga Descriptions}}
-
-\begin{itemize}
-	\item $city\_name$;
-	\item $cloudiness$;
-	\item $atmosphere$;
-	\item $snow$;
-	\item $thunderstorm$;
-	\item $rain$;
-	\item $sunrise$;
-	\item $sunset$;
-	\item $creation\_date$.
-\end{itemize}
-
-\subsection{\textit{Weather Braga}}
-
-\begin{itemize}
-	\item $city\_name$;
-	\item $temperature$;
-	\item $atmospheric\_pressure$;
-	\item $humidity$;
-	\item $wind\_speed$;
-	\item $clouds$;
-	\item $precipitation$;
-	\item $current\_luminosity$;
-	\item $sunrise$;
-	\item $sunset$;
-	\item $creation\_date$.
-\end{itemize}
 
 \subsection{Preparação dos dados}
 \label{section:falta}
@@ -498,7 +441,7 @@ Ambas as métricas de erro parecem ser úteis para perceber o comportamento do m
 
 \subsubsection{Rua 1}
 
-Começou-se por treinar o modelo com $5045$ dados da rua $1$, e fazer a previsão para essa mesma rua. 
+Começou-se por treinar o modelo com $5045$ dados da rua $1$, e fazer a previsão para essa mesma rua. O modelo obtido apresentava $val\_loss=0.01047$.
 
 \begin{figure}[H]
 	\centering
@@ -603,9 +546,17 @@ Observando a Figura \ref{figure:curvas_aprend_1}, conclui-se que o modelo criado
 		&2.05\\
 		\hline\hline
 	\end{tabular}
+\caption{Valores previstos e reais, durante 24 horas, para o mesmo dia representado no gráfico.}
 \end{table}
 
-A Figura \ref{figure:real_prev_1} e a tabela permitem comparar o valor previsto com o valor real, durante um período de $24$ horas. Ora, através da análise do gráfico, observa-se que não existe uma grande discrepância entre o valor real e o valor previsto. Pelo que se pode considerar que, para este caso, o modelo construído faz boas previsões. É de notar que, neste caso, os valores previstos são mais distintos dos valores reais às $3$ e $4$ da manhã, sendo normal que o modelo erre nestas horas, uma vez que não é comum que o valor do \textit{speed\_diff} seja mais elevado nestas, ou seja, pode inferir-se que este dia não representa os dias comuns.
+A Figura \ref{figure:real_prev_1} e a tabela permitem comparar o valor previsto com o valor real, durante um período de $24$ horas. Note-se que, para o dia apresentado, tem-se que:
+
+\begin{itemize}
+	\item \textit{average\_diff}$=0.56$;
+	\item \textit{max\_diff}$=2.63$.
+\end{itemize}
+
+Ora, através da análise do gráfico, e dos valores obtidos para as métricas de erro, observa-se que não existe uma grande discrepância entre o valor real e o valor previsto. Pelo que se pode considerar que, para este caso, o modelo construído faz boas previsões. É de notar que, neste caso, os valores previstos são mais distintos dos valores reais às $3$ e $4$ da manhã, sendo normal que o modelo erre nestas horas, uma vez que não é comum que o valor do \textit{speed\_diff} seja mais elevado nestas, ou seja, pode inferir-se que este dia não representa os dias comuns.
 
 
 Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes valores do erro, obtiveram-se os seguinte resultados:
@@ -656,7 +607,7 @@ Tendo em conta os gráficos e os resultados apresentados nas tabelas, pode concl
 
 \subsubsection{Rua 2}
 
-Considerando os dados de treino da rua $2$, treinou-se o modelo construído, obtendo-se os seguintes resultados.
+Considerando os dados de treino da rua $2$, treinou-se o modelo construído, com $val\_loss=0.00376$, obtendo-se os seguintes resultados. 
 
 \begin{figure}[H]
 	\centering
@@ -669,7 +620,7 @@ Analisando o gráfico, observa-se que, em relação ao apresentado para a rua $1
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{resultados/real_prev_2.png}
-	\caption{Valores reais vs previstos, em 24 horas.}
+	\caption{Valores reais vs previstos, durante 24 horas, para um dia aleatório.}
 \end{figure}
 
 \begin{table}[H]
@@ -760,15 +711,15 @@ Analisando o gráfico, observa-se que, em relação ao apresentado para a rua $1
 		& 8.48\\
 		\hline\hline
 	\end{tabular}
+\caption{Valores previstos e reais, durante 24 horas, para o mesmo dia representado no gráfico.}
 \end{table}
 
 Analisando os resultados acima apresentados pode concluir-se, que para este exemplo, o modelo fez boas previsões. Estas conclusões são reforçadas pelos valores obtidos para as métricas de erro:
 
 \begin{itemize}
-	\item average\_diff
-	\item max\_diff
+	\item average\_diff$=0.87$;
+	\item max\_diff$=3.99$.
 \end{itemize}
-
 
 Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes valores do erro, obtiveram-se os seguinte resultados:
 
@@ -805,7 +756,7 @@ Analisando os resultados dos erros observa-se que os valores obtidos são unifor
 
 \subsubsection{Rua 3}
 
-Considerem-se agora os resultados obtidos pelo modelo treinado para a rua 3. Sabe-se que esta rua diz respeito à Rua do Caires, que corresponde a uma rua com bastante trânsito sendo, por isso, expectável grandes oscilações no valor da variável \textit{speed\_diff}, de uma hora para a outra.
+Considerem-se agora os resultados obtidos pelo modelo treinado para a rua 3, com $val\_loss=0.00393$. Sabe-se que esta rua diz respeito à Rua do Caires, que corresponde a uma rua com bastante trânsito sendo, por isso, expectável grandes oscilações no valor da variável \textit{speed\_diff}, de uma hora para a outra.
 
 \begin{figure}[H]
 	\centering
@@ -818,7 +769,7 @@ Considerem-se agora os resultados obtidos pelo modelo treinado para a rua 3. Sab
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{resultados/real_prev_3.png}
-	\caption{Valores reais vs previstos, em 24 horas.}
+	\caption{Valores reais vs previstos, durante 24 horas, para um dia aleatório.}
 \end{figure}
 
 \begin{table}[H]
@@ -829,124 +780,125 @@ Considerem-se agora os resultados obtidos pelo modelo treinado para a rua 3. Sab
 		\hline\hline
 		0 & 
 0
- & 0.032280684 \\
+ & 0.032 \\
 		\hline
 		1  &
-0 & 0.06226761\\
+0 & 0.062\\
 		\hline
-		2 & 0 & 0.0001824899	\\
+		2 & 0 & 0.00018	\\
 		\hline
 		3  & 
 0
- & 0.002977331\\
+ & 0.0030\\
 		\hline
 		4 & 0
- &0.038694322 \\
+ &0.039 \\
 		\hline
 		5  & 0
- &8.884608e-05 \\
+ &8.88e-05 \\
 		\hline
 		6 & 0
 
  & 
 
-7.37009e-05 \\
+7.37e-05 \\
 		\hline
 		7 & 
 0
- & 0.00014307268\\
+ & 0.00014\\
 		\hline
 		8  &
-0 & 1.6951117e-05\\
+0 & 1.70e-05\\
 		\hline
-		9 &  0& 0.0026792889	\\
+		9 &  0& 0.0027	\\
 		\hline
 		10 & 
 
-0 &0.009467335 \\
+0 &0.0095 \\
 		\hline
 		11  &
-5.67 & 4.2219253\\
+5.67 & 4.22\\
 		\hline
-		12 & 26.33 & 26.00911	\\
+		12 & 26.33 & 26.01	\\
 		\hline
 		13  & 
 0
- &0.9039111 \\
+ &0.90\\
 		\hline
 		14 & 0
- &0.08721095 \\
+ &0.087 \\
 		\hline
 		15  & 
-3.67 & 0.22982505\\
+3.67 & 0.23\\
 		\hline
 		16 & 
 
 0 & 
-1.524076
+1.52
  \\
 		\hline
 		17 & 
 20.33
- & 18.167295 \\
+ & 18.17 \\
 		\hline
 		18  &
-12 & 9.12594 \\
+12 & 9.13 \\
 		\hline
-		19 & 7.99 & 8.301455	\\
+		19 & 7.99 & 8.30	\\
 		\hline
 		20 & 
 13
- &11.784495 \\
+ &11.78 \\
 		\hline
 		21  &
-14 &12.6543255 \\
+14 &12.65 \\
 		\hline
-		22 & 18 & 14.313829	\\
+		22 & 18 & 14.31\\
 		\hline
 		23  & 3
 
- & 5.1567326\\
+ & 5.16\\
 		\hline\hline
 	\end{tabular}
+\caption{Valores previstos e reais, durante 24 horas, para o mesmo dia representado no gráfico.}
 \end{table}
 
-Note-se que à hora $12$ o \textit{speed\_diff} real era de $26.33$ e o modelo fez uma previsão de $26.00$, à semelhança do que aconteceu para a hora $17$, realçando o excelente desempenho do modelo ao prever este dia.
+Note-se que à hora $12$ o \textit{speed\_diff} real era de $26.33$ e o modelo fez uma previsão de $26.00$, à semelhança do que aconteceu para a hora $17$. Note-se ainda que, \textit{average\_diff}$=0.90$ e \textit{max\_diff}$=3.67$. Ora, estes resultados realçam o excelente desempenho do modelo ao prever este dia.
 
 Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes valores do erro, obtiveram-se os seguinte resultados:
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{||c||c|c||}
+	\begin{tabular}{||c||c|c|c||}
 		\hline\hline
-		& \textit{Average Diff} & \textit{Max Diff} \\
+		& Número de Ocurrências &\textit{Average Diff} & \textit{Max Diff} \\
 		\hline\hline
-		29 Segundas & 
-1.1104795417657065
- & 5.096033663632976\\
+		 Segunda-Feira & 29&
+1.11
+ & 5.10\\
 		\hline
-		32 Terças  &
+		 Terça-Feira  &32&
 
-1.264305124666961 & 5.205189819066919 \\
+1.26 & 5.21 \\
 		\hline
-		21 Quartas & 
-1.1223343328243598
- & 4.69481890565819 \\
+		 Quarta-Feira & 21&
+1.12
+ & 4.69 \\
 		\hline
-		28 Quintas  & 
-1.340759207220143
- & 5.520887696665271\\
+		 Quinta-Feira  & 28&
+1.34
+ & 5.52\\
 		\hline
-		26 Sextas & 1.0976789264484141
- & 4.579785451503434\\
+		 Sexta-Feira &26& 1.10
+ & 4.58\\
 		\hline
-		40 Sábados  & 
-1.2548639571139115& 4.768039370036238 \\
+		 Sábado &40 & 
+1.25& 4.77 \\
 		\hline
-		24 Domingos & 
-0.5671839880583601
+		 Domingo & 24&
+0.57
  & 
-3.284548810598506 \\
+3.28 \\
 		\hline\hline
 	\end{tabular}
 	\label{table:rua3}
@@ -957,7 +909,7 @@ Apesar de se verificar, através do gráfico, que o modelo fez boas previsões, 
 
 \subsubsection{Rua 4}
 
-A presente secção pretende analisar os resultados obtidos com o modelo treinado para a rua $4$. Note-se que, à semelhança da rua $3$, esta é uma rua com bastante trânsito, sendo expectável obterem-se resultados semelhantes aos apresentados para essa rua.
+A presente secção pretende analisar os resultados obtidos com o modelo treinado para a rua $4$, cujo $val\_loss=0.00295$. Note-se que, à semelhança da rua $3$, esta é uma rua com bastante trânsito, sendo expectável obterem-se resultados semelhantes aos apresentados para essa rua.
 
 Apresentam-se, de seguida, os valores obtidos pelo modelo treinado com os dados da rua $4$. 
 
@@ -972,7 +924,7 @@ Tal como observado para os gráficos das curvas de aprendizagem dos modelos das 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{resultados/real_prev_4.png}
-	\caption{Valores reais vs previstos, em 24 horas.}
+	\caption{Valores reais vs previstos, durante 24 horas, para um dia aleatório.}
 \end{figure}
 
 \begin{table}[H]
@@ -983,123 +935,124 @@ Tal como observado para os gráficos das curvas de aprendizagem dos modelos das 
 		\hline\hline
 		0 & 
 3.33
- & 1.6831238\\
+ & 1.68\\
 		\hline
 		1  &
-0 &0.0036463984 \\
+0 &0.0036 \\
 		\hline
-		2 & 0 & 	3.9301664e-09\\
+		2 & 0 & 	3.93e-09\\
 		\hline
 		3  & 0
 
- &  6.119647e-05\\
+ &  6.12e-05\\
 		\hline
 		4 & 0
- &6.241123e-10 \\
+ &6.24e-10 \\
 		\hline
 		5  &0 
- &2.987104e-06 \\
+ &2.99e-06 \\
 		\hline
 		6 & 0
 
  & 
 
-2.3474257e-05 \\
+2.35e-05 \\
 		\hline
 		7 & 0
 
- & 0.00030335836\\
+ & 0.00030\\
 		\hline
 		8  &0
- & 7.2902294e-05\\
+ & 7.29e-05\\
 		\hline
-		9 & 0 &  2.5659345e-05	\\
+		9 & 0 &  2.57e-05	\\
 		\hline
 		10 & 
 0
- & 0.022530494 \\
+ & 0.023 \\
 		\hline
 		11  &
-3.33 &3.0792594 \\
+3.33 &3.079 \\
 		\hline
-		12 & 14 & 13.116628	\\
+		12 & 14 & 13.12	\\
 		\hline
 		13  & 
 19.67 
- &  15.995314\\
+ &  15.99\\
 		\hline
 		14 & 
- 12.0 &  13.002526\\
+ 12.0 &  13.00\\
 		\hline
 		15  & 17.33
- & 17.276192\\
+ & 17.28\\
 		\hline
 		16 & 
 23.67
- & 21.827679
+ & 21.83
 
  \\
 		\hline
 		17 & 
 14.67
- &13.331219 \\
+ &13.33 \\
 		\hline
 		18  &
- 17.674& 16.39099\\
+ 17.67& 16.40\\
 		\hline
-		19 & 24 & 	22.018396\\
+		19 & 24 & 	22.02\\
 		\hline
 		20 & 
 26
- & 24.598763 \\
+ & 24.60\\
 		\hline
 		21  &
- 28.33& 25.148285\\
+ 28.33& 25.15\\
 		\hline
-		22 & 29 & 29.302673	\\
+		22 & 29 & 29.30	\\
 		\hline
 		23  & 
 23
- & 21.183737\\
+ & 21.18\\
 		\hline\hline
 	\end{tabular}
+\caption{Valores previstos e reais, durante 24 horas, para o mesmo dia representado no gráfico.}
 \end{table}
 
-Observando os resultados apresentados, tiram-se conclusões semelhantes às obtidas para o exemplo apresentado para a rua $3$.
+Observando os resultados apresentados, e tendo em conta que \textit{average\_diff}$=0.86$ e \textit{max\_diff}$=3.67$, tiram-se conclusões semelhantes às obtidas para o exemplo apresentado para a rua $3$.
 
 Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes valores do erro, obtiveram-se os seguinte resultados:
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{||c||c|c||}
+	\begin{tabular}{||c||c|c|c||}
 		\hline\hline
-		& \textit{Average Diff} & \textit{Max Diff} \\
+		&Número de Ocurrências& \textit{Average Diff} & \textit{Max Diff} \\
 		\hline\hline
-		29 Segundas & 
-0.6434349814782563
- & 4.357169496163079\\
+		 Segunda-Feira & 29&
+0.64
+ & 4.36\\
 		\hline
-		32 Terças  &
-1.0732532610132068
- & 5.173105200712162 \\
+		 Terça-Feira  &32&
+1.07
+ & 5.17 \\
 		\hline
-		21 Quartas & 
-0.9179087441886314
- & 5.071644801119003 \\
+		 Quarta-Feira & 21&
+0.92
+ & 5.07 \\
 		\hline
-		28 Quintas  & 
-1.1919938745260334
- & 5.7381584813503155 \\
+		 Quinta-Feira  & 28&
+1.19
+ & 5.74 \\
 		\hline
-		26 Sextas & 0.91356394178488
- & 5.536007864537613 \\
+		 Sexta-Feira & 26&0.91
+ & 5.54\\
 		\hline
-		40 Sábados  & 0.9611405798139803
-& 4.2988463422039525 \\
+		 Sábado  &40& 0.96
+& 4.30 \\
 		\hline
-		24 Domingos & 
-0.4436569034521404
- & 4.482812049263807
+		 Domingo & 24&
+0.44
+ & 4.48
  \\
 		\hline\hline
 	\end{tabular}
@@ -1109,7 +1062,7 @@ Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes
 
 Apesar destas ruas serem ruas com muito trânsito é de notar que, a rua 4 apresenta valores de erro mais baixos do que os da rua anterior, isto pode ter em conta o facto de que a rua 3 em certos meses, por exemplo, Junho, Julho, Agosto, quando não há período escolar, esta apresenta um valor de trânsito muita mais baixo, o que faz com que o nosso dataset apresente valores de speed diff menores neste período. Ou seja, ao treinar o modelo com estes dados, conjetura-se que o modelo criado possa não ser tão preciso.Isto para concluir que a rua $4$, sendo uma rua que apresenta o mesmo fluxo de trânsito durante um ano inteiro, uma das razões possíveis para os erros darem mais baixo para esta rua é o facto supramencionado.
 
-\section{Extra}
+\section{Outros Resultados}
 
 O presente capítulo pretende analisar o comportamento dos modelos obtidos para as diferentes ruas, testando-os para outras ruas, e analisar o comportamento do modelo treinado com o \textit{dataset} no qual não foram incluído os incidentes.
 
@@ -1126,7 +1079,7 @@ Este subcapítulo pretende analisar o comportamento do modelo treinado com o \te
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{resultados/prev_real_no_inc.png}
-	\caption{Valores reais vs previstos, em 24 horas.}
+	\caption{Valores reais vs previstos, durante 24 horas, para um dia aleatório.}
 \end{figure}
 
 \begin{table}[H]
@@ -1135,116 +1088,88 @@ Este subcapítulo pretende analisar o comportamento do modelo treinado com o \te
 		\hline\hline
 		Hora & Real&Previsto\\
 		\hline\hline
-		0 & 
-0
- & 6.9066814e-08 \\
+		0 & 0 & 6.91e-08 \\
 		\hline
-		1  &
-0 & 2.5607434e-07\\
+		1  &0 & 2.56e-07\\
 		\hline
-		2 & 0 & 2.7351797e-07\\
+		2 & 0 & 2.74e-07\\
 		\hline
-		3  & 0
-
- &2.0879885e-05 \\
+		3  & 0 &2.088e-05 \\
 		\hline
-		4 & 0
- &0.01707314 \\
+		4 & 0 &0.017 \\
 		\hline
-		5  &0 
- &0.09949607 \\
+		5  &0  &0.099 \\
 		\hline
-		6 & 1.33
-
- & 
-
-0.9240082 \\
+		6 & 1.33& 0.92 \\
 		\hline
-		7 & 1.67
-
- & 1.1667032\\
+		7 & 1.67& 1.17\\
 		\hline
-		8  &3.33
- & 2.5204258\\
+		8  &3.33& 2.52\\
 		\hline
-		9 & 0 &  0.45500085\\
+		9 & 0 &  0.46\\
 		\hline
-		10 & 
-2.33
- &  2.0409627 \\
+		10 & 2.33 &  2.04 \\
 		\hline
-		11  &
-5.67 &3.920147 \\
+		11  &5.67 &3.92\\
 		\hline
-		12 & 6 &  4.414104\\
+		12 & 6 &  4.41\\
 		\hline
-		13  & 
-3.33
- & 2.5295854 \\
+		13  & 3.33 & 2.53 \\
 		\hline
-		14 & 
-0  & 0.12146372\\
+		14 & 0  & 0.12\\
 		\hline
-		15  & 0
- &0.0020382823 \\
+		15  & 0 &0.0020 \\
 		\hline
-		16 & 0
- & 
-3.961704e-09 \\
+		16 & 0 & 3.96e-09 \\
 		\hline
-		17 & 
-0
- & 6.731966e-08 \\
+		17 & 0 & 6.73e-08 \\
 		\hline
-		18  &
-0 &1.2392364e-06 \\
+		18  &0 &1.24e-06 \\
 		\hline
-		19 &0  & 1.6075727e-07	\\
+		19 &0  & 1.61e-07	\\
 		\hline
-		20 & 
-
-0 & 1.254804e-06\\
+		20 & 0 & 1.25e-06\\
 		\hline
-		21  &
-0 & 1.0915311e-09\\
+		21  &0 & 1.09e-09\\
 		\hline
-		22 & 0 & 5.4359017e-12	\\
+		22 & 0 & 5.44e-12	\\
 		\hline
-		23  & 0
-
- & 4.7200618e-05 \\
+		23  & 0& 4.72e-05 \\
 		\hline\hline
 	\end{tabular}
+\caption{Valores previstos e reais, durante 24 horas, para o mesmo dia representado no gráfico.}
 \end{table} 
+
+Note-se que, para o exemplo considerado se tem \textit{average\_diff}$=0.29$ e \textit{max\_diff}$=1.75$.
 
 Por fim, faça-se uma análise dos erros obtidos. Após calculados os diferentes valores do erro, obtiveram-se os seguinte resultados:
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{||c||c|c||}
+	\begin{tabular}{||c||c|c|c||}
 		\hline\hline
-		& \textit{Average Diff} & \textit{Max Diff} \\
+		& Número de Ocurrências&\textit{Average Diff} & \textit{Max Diff} \\
 		\hline\hline
-		29 Segundas & 
-0.8580420333193335
- & 3.0794863584689107\\
+		 Segunda-Feira & 29&
+0.86
+ & 3.08\\
 		\hline
-		32 Terças  &
-0.8183510621136405& 3.096227680302678  \\
+		 Terça-Feira  &32&
+0.82& 3.096  \\
 		\hline
-		21 Quartas & 0.872193862194359
- & 2.8067537848154704 \\
+		 Quarta-Feira &21& 0.87
+ & 2.81 \\
 		\hline
-		28 Quintas  & 
-0.8651441438734818
- & 2.96524466102997\\
+		 Quinta-Feira  & 28&
+0.87
+ & 2.97\\
 		\hline
-		26 Sextas & 1.04050743303996 & 3.0716054604671785 \\
+		 Sexta-Feira &26& 1.04 & 3.07 \\
 		\hline
-		40 Sábados  & 0.5317055662987664&2.3876666585233886  \\
+		 Sábado  &40& 0.53&2.39  \\
 		\hline
-		24 Domingos & 0.5553113784184134
- & 2.172586509579598
+		 Domingo &24& 0.56
+ & 2.17
  \\
 		\hline\hline
 	\end{tabular}
@@ -1265,7 +1190,7 @@ De seguida, apresenta-se, graficamente, os resultados obtidos, para um dia de te
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{resultados/real_prev_mod2_rua1.png}
-	\caption{Valores reais vs previstos, em 24 horas.}
+	\caption{Valores reais vs previstos, durante 24 horas, para um dia aleatório.}
 \end{figure}
 
 Analisando o gráfico, conclui-se que o modelo não se comporta de modo ótimo. Note-se que, nas horas $22$ e $23$ existe uma grande discrepância nos valores.
@@ -1274,32 +1199,32 @@ Relativamente aos erros obtidos, foram os seguintes:
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{||c||c|c||}
+	\begin{tabular}{||c||c|c|c||}
 		\hline\hline
-		& \textit{Average Diff} & \textit{Max Diff} \\
+		&Número de Ocurrências& \textit{Average Diff} & \textit{Max Diff} \\
 		\hline\hline
-		Segundas & 1.4970504526843698
-		& 6.902452780405327 \\
+		Segunda-Feira & 29&1.50
+		& 6.90 \\
 		\hline
-		Terças  &
-		1.5817615829476248
-		& 7.0771182393603675 \\
+		Terça-Feira  &32&
+		1.58
+		& 7.08 \\
 		\hline
-		Quartas & 
-		1.564599320078336 & 7.752798380280793	\\
+		Quarta-Feira & 21&
+		1.56 & 7.75	\\
 		\hline
-		Quintas  & 1.7489723562496609
-		& 6.787156304928169	\\
+		Quinta-Feira  & 28&1.75
+		& 6.79	\\
 		\hline
-		Sextas & 
-		1.8400726700992243 & 7.6605935197642 \\
+		Sexta-Feira & 26&
+		1.84 & 7.66 \\
 		\hline
-		Sábados  & 1.7762016329303
-		& 7.453315566827695 \\
+		Sábado &40 & 1.78
+		& 7.45 \\
 		\hline
-		Domingos & 
-		1.766229661484953 & 
-		7.906649859769938
+		Domingo & 24&
+		1.77 & 
+		7.91
 		\\
 		\hline\hline
 	\end{tabular}
@@ -1311,14 +1236,14 @@ Por fim, analisando o valor obtido para os erros observa-se que estes são super
 
 \subsection{Usar modelo da rua 1 para fazer previsões para a rua 3}
 
-O presente subcapítulo pretende
+O presente subcapítulo pretende avaliar o comportamento do modelo treinado para a rua $1$ para prever o valor \textit{speed\_diff} para uma rua com características distintas desta rua como, por exemplo, a rua $3$.
 
-De seguida, apresenta-se, graficamente, os resultados obtidos, para o primeiro dia de teste:
+De seguida, apresenta-se, graficamente, os resultados obtidos, para um dia de teste:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{resultados/real_prev_mod1_rua3.png}
-	\caption{Valores reais vs previstos, em 24 horas.}
+	\caption{Valores reais vs previstos, durante 24 horas, para um dia aleatório.}
 \end{figure}
 
 Relativamente aos erros obtidos, foram os seguintes:
@@ -1363,6 +1288,17 @@ Relativamente aos erros obtidos, foram os seguintes:
 
 Verificando os resultados, observam-se erros muito elevados. Isto deve-se ao facto do modelo prever valores de \textit{speed\_diff} baixos, uma vez que a rua $1$ apresenta um baixo fluxo de trânsito valores baixos para a \textit{speed\_diff}, e a rua $3$ ser uma rua com bastante trânsito e apresentar valores de \textit{speed\_diff} bastantes elevados.
 
+\section{Trabalhos Futuros}
+
+Apresentaram-se, nos últimos capítulos alguns dos testes efetuados, e respetiva análise crítica. No entanto, existem muitos mais testes interessantes que poderiam ter sido realizados, nomeadamente:
+
+\begin{enumerate}
+	\item Criar um modelo que fosse treinado com as ruas $1$ e $2$, simultaneamente, e verificar o seu comportamento na previsão da variável \textit{speed\_diff} das ruas $1$ e $2$, separadamente;
+	\item Fazer o mesmo estudo mencionado em $(1)$, mas para as ruas $3$ e $4$;
+	\item Treinar o modelo com todas as ruas e avaliar o seu desempenho;
+	\item Considerar o melhor modelo criado e testá-lo para o \textit{dataset} do Porto;
+	\item Dado o facto da rua $3$ ser uma rua cujo o trânsito depende muito do facto de ser, ou não, período letivo, e, portanto, apresentar muito menos trânsito durante os meses Junho, Julho e Agosto, talvez fosse interessante fazer o treino do modelo para esta rua, sem os meses mencionados, e avaliar o desempenho do modelo.
+\end{enumerate}
 
 
 
